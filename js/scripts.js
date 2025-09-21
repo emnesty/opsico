@@ -190,3 +190,149 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", requestTick, { passive: true });
 });
+
+// Funcionalidade dos Diferenciais - Alternância entre tabs e imagens
+document.addEventListener("DOMContentLoaded", function () {
+  const featureItems = document.querySelectorAll(
+    ".diferenciais-opsico .feature-item"
+  );
+  const carouselTrack = document.querySelector(
+    ".diferenciais-opsico .carousel-track"
+  );
+  const slides = document.querySelectorAll(".diferenciais-opsico .slide");
+
+  if (featureItems.length === 0 || !carouselTrack || slides.length === 0) {
+    return; // Sair se os elementos não existirem
+  }
+
+  let currentSlide = 0;
+  let autoSlideInterval;
+
+  // Função para mudar para um slide específico
+  function goToSlide(index) {
+    if (index < 0 || index >= slides.length) return;
+
+    currentSlide = index;
+
+    // Rolar o carrossel para o slide correspondente
+    const slideWidth = slides[0].offsetWidth;
+    carouselTrack.scrollTo({
+      left: slideWidth * index,
+      behavior: "smooth",
+    });
+
+    // Atualizar classes ativas nos feature items
+    featureItems.forEach((item, i) => {
+      if (i === index) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }
+
+  // Função para ir para o próximo slide
+  function nextSlide() {
+    const nextIndex = (currentSlide + 1) % slides.length;
+    goToSlide(nextIndex);
+  }
+
+  // Função para iniciar auto-slide
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 4000); // Muda a cada 4 segundos
+  }
+
+  // Função para parar auto-slide
+  function stopAutoSlide() {
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = null;
+    }
+  }
+
+  // Adicionar event listeners aos feature items
+  featureItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      stopAutoSlide();
+      goToSlide(index);
+
+      // Reiniciar auto-slide após 6 segundos de inatividade
+      setTimeout(() => {
+        if (!autoSlideInterval) {
+          startAutoSlide();
+        }
+      }, 6000);
+    });
+
+    // Parar auto-slide ao passar o mouse
+    item.addEventListener("mouseenter", stopAutoSlide);
+    item.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (!autoSlideInterval) {
+          startAutoSlide();
+        }
+      }, 1000);
+    });
+  });
+
+  // Detectar mudanças manuais no carrossel via scroll
+  let scrollTimeout;
+  carouselTrack.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    stopAutoSlide();
+
+    scrollTimeout = setTimeout(() => {
+      const slideWidth = slides[0].offsetWidth;
+      const newIndex = Math.round(carouselTrack.scrollLeft / slideWidth);
+
+      if (
+        newIndex !== currentSlide &&
+        newIndex >= 0 &&
+        newIndex < slides.length
+      ) {
+        currentSlide = newIndex;
+
+        // Atualizar feature items ativos
+        featureItems.forEach((item, i) => {
+          if (i === newIndex) {
+            item.classList.add("active");
+          } else {
+            item.classList.remove("active");
+          }
+        });
+      }
+
+      // Reiniciar auto-slide
+      setTimeout(() => {
+        if (!autoSlideInterval) {
+          startAutoSlide();
+        }
+      }, 3000);
+    }, 150);
+  });
+
+  // Inicializar
+  goToSlide(0);
+  startAutoSlide();
+
+  // Parar auto-slide quando a seção não estiver visível
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!autoSlideInterval) {
+            startAutoSlide();
+          }
+        } else {
+          stopAutoSlide();
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  const diferenciais = document.querySelector(".diferenciais-opsico");
+  if (diferenciais) {
+    observer.observe(diferenciais);
+  }
+});

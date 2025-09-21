@@ -1,0 +1,54 @@
+.cta-jornada {
+  padding: clamp(40px, 6vw, 72px) 0;
+
+  .container {
+    margin: 0 auto;
+    padding: 64px;
+    background-color: #def8e7;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .cta-content {
+    max-width: 720px;
+
+    h2 {
+      font-size: clamp(2.4rem, 2rem + 1vw, 3rem);
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 12px 0;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      margin: 0;
+    }
+  }
+
+  .cta-action {
+    flex-shrink: 0;
+    a.btn-primary {
+      padding: 18px 36px;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+      gap: 24px;
+      padding: 32px 24px;
+    }
+    .cta-action a.btn-primary {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+}

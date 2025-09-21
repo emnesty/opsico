@@ -4,7 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-primary);
   font-style: normal;
   -webkit-front-smoothing: antialiased;
 }
@@ -39,7 +39,7 @@ button {
   }
 }
 :root {
-  --primary: #EA7100;
+  --primary: #ea7100;
   --secondary: #6941c6;
   --background-default: #0d0d0e;
   --font-size-text-sm: 16px;
@@ -70,4 +70,4 @@ button {
 }
 .btn-header span {
   font-size: var(--font-size-text-sm);
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

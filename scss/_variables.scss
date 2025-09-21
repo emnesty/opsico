@@ -1,15 +1,20 @@
-//Primary Palette
+// Paleta de Cores
 :root {
-  --primary: #EA7100;
-  --secondary: #6941c6;
+  --button-color: #195059;
+  --text-color: #005c65;
+  --hero-bg-color: #dcfae6; // Cor de fundo aproximada da seção hero
+  --white: #ffffff;
+  --secondary: #6941c6; // Mantive esta, caso precise
   --background-default: #0d0d0e;
 
-  //Fonts
-  --font-size-text-sm: 16px;
+  // Fontes
+  --font-family-primary: "Source Serif 4", serif;
+  --font-size-text-body: 1.8rem; // Equivalente a 18px
+  --font-size-text-sm: 1.6rem; // Equivalente a 16px
 
-  //Spacing
+  // Espaçamento
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
-  --spacing-xs: 12px;
+  --spacing-lg: 24px;
 }

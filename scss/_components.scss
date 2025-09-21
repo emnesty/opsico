@@ -1,11 +1,48 @@
-.btn-header{
-    background: var(--primary);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--spacing-sm);
-    span {
-        font-size: var(--font-size-text-sm);
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: var(--font-size-text-sm);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &-primary {
+    background-color: var(--button-color);
+    color: var(--white);
+    &:hover {
+      background-color: #2a7e8a;
     }
+  }
+
+  &-secondary {
+    background-color: var(--button-color);
+    color: var(--white);
+    &:hover {
+      background-color: #2a7e8a;
+    }
+  }
+
+  &-login {
+    color: var(--text-color);
+    font-weight: 600;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  // Responsividade para botões
+  @media (max-width: 768px) {
+    padding: 14px 24px;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px 20px;
+    font-size: 1.5rem;
+    min-height: 48px; // Para facilitar o toque em dispositivos móveis
+  }
 }

@@ -4,9 +4,9 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-primary);
   font-style: normal;
-  -webkit-front-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -18,12 +18,16 @@ img {
   display: block;
 }
 
-button {
+button,
+.btn {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  display: inline-block;
+  text-align: center;
 }
 
 body {
-  // background-color: var(--background-default);
+  font-size: var(--font-size-text-body);
+  color: var(--text-color);
 }

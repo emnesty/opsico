@@ -30,4 +30,17 @@ button,
 body {
   font-size: var(--font-size-text-body);
   color: var(--text-color);
+  transition: padding-top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &.header-fixed {
+    padding-top: 82px; // Compensa a altura do header quando fixo (ajustado)
+
+    @media (max-width: 768px) {
+      padding-top: 72px; // Altura menor em mobile (ajustado)
+    }
+
+    @media (max-width: 640px) {
+      padding-top: 68px; // Ainda menor para mobile muito pequeno
+    }
+  }
 }

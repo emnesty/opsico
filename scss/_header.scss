@@ -4,6 +4,7 @@
   z-index: 1000;
   background-color: var(--white);
 
+  // Quando o menu mobile estiver ativo
   &.menu-active {
     @media (max-width: 640px) {
       position: fixed;
@@ -64,9 +65,11 @@
       img {
         height: 70px;
         width: auto;
+
         &:not(.logo-white) {
           opacity: 0;
         }
+
         &.logo-white {
           opacity: 1;
         }
@@ -92,6 +95,7 @@
 
           .dropdown-toggle {
             cursor: pointer;
+
             img {
               transition: transform 0.3s ease;
             }
@@ -101,6 +105,7 @@
             .dropdown-toggle img {
               transform: rotate(180deg);
             }
+
             .dropdown-menu {
               opacity: 1;
               visibility: visible;
@@ -155,7 +160,7 @@
                 white-space: nowrap;
 
                 &:hover {
-                  background: #f8f9fa;
+                  background-color: #f8f9fa;
                   color: var(--button-color);
                   opacity: 1;
                   transform: translateX(2px);
@@ -173,6 +178,7 @@
           font-size: var(--font-size-text-body);
           font-weight: 500;
           transition: all 0.3s ease;
+
           &:hover {
             opacity: 0.7;
           }
@@ -215,9 +221,11 @@
         transition: all 0.3s ease;
         left: 0;
       }
+
       &::before {
         top: -9px;
       }
+
       &::after {
         bottom: -9px;
       }
@@ -225,10 +233,12 @@
 
     &.active .hamburger {
       background-color: transparent;
+
       &::before {
         top: 0;
         transform: rotate(45deg);
       }
+
       &::after {
         bottom: 0;
         transform: rotate(-45deg);
@@ -239,6 +249,7 @@
   @media (max-width: 1024px) {
     .header-actions {
       gap: var(--spacing-sm);
+
       .btn {
         padding: 10px 16px;
         font-size: 1.4rem;
@@ -248,19 +259,24 @@
 
   @media (max-width: 768px) {
     padding: var(--spacing-md) 0;
+
     .logo img {
       height: 36px;
     }
+
     nav .nav-list {
       gap: 24px;
+
       li a {
         font-size: 1.6rem;
       }
     }
+
     .header-actions {
       .btn-login {
         display: none;
       }
+
       .btn-primary {
         padding: 8px 12px;
         font-size: 1.3rem;
@@ -268,7 +284,7 @@
     }
   }
 
-  /* ===== MOBILE ===== */
+  // === AJUSTES COMPLETOS PARA O MENU MOBILE ===
   @media (max-width: 640px) {
     .mobile-menu-toggle {
       display: flex;
@@ -282,6 +298,7 @@
       left: 0;
       width: 100%;
       height: 100vh;
+      background: #195059;
       background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 1) 0%,
@@ -309,6 +326,7 @@
         transition: all 0.3s ease;
         z-index: -1;
       }
+
       &.active::before {
         opacity: 1;
         visibility: visible;
@@ -329,7 +347,7 @@
           &.dropdown {
             display: flex;
             flex-direction: column;
-            align-items: stretch;
+            align-items: stretch; /* ocupa toda a largura */
 
             .dropdown-toggle {
               position: relative;
@@ -337,47 +355,35 @@
               display: flex;
               justify-content: center;
               align-items: center;
+
               &.active img {
                 transform: rotate(180deg);
               }
             }
 
-            /* evita herdar translate do hover desktop */
-            &:hover .dropdown-menu {
-              left: auto !important;
-              transform: none !important;
-              -webkit-transform: none !important;
-            }
-
+            /* DROPDOWN CENTRALIZADO */
             .dropdown-menu {
-              /* fechado: sem ghost line */
               position: static;
-              width: min(420px, 90%);
-              margin: 0 auto 0; /* sem margem visível quando fechado */
-              padding: 0;
-              max-height: 0;
               opacity: 0;
               visibility: hidden;
-              overflow: hidden;
-              pointer-events: none;
+              transform: none;
               background: rgba(255, 255, 255, 0.1);
-              border: 0 solid transparent; /* sem borda quando fechado */
-              border-radius: 8px;
               box-shadow: none;
-              will-change: max-height, opacity;
-              transition: opacity 0.3s ease, max-height 0.3s ease,
-                padding 0.3s ease, visibility 0.3s ease, border-width 0.2s ease,
-                margin 0.2s ease;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              border-radius: 8px;
+              margin: 8px auto 0;
+              padding: 0;
+              transition: all 0.3s ease;
+              max-height: 0;
+              overflow: hidden;
+              width: min(420px, 90%); /* largura fixa centralizada */
 
               &.active {
                 opacity: 1;
                 visibility: visible;
                 max-height: 320px;
                 padding: 8px 0;
-                margin: 8px auto 0; /* aparece centralizado abaixo do item */
-                border-width: 1px; /* borda só quando aberto */
-                border-color: rgba(255, 255, 255, 0.2);
-                pointer-events: auto;
+                margin-top: 8px;
               }
 
               &::before {
@@ -387,6 +393,7 @@
               li {
                 margin: 0;
                 width: 100%;
+
                 a {
                   font-size: 1.8rem;
                   font-weight: 500;
@@ -398,6 +405,7 @@
                   width: calc(100% - 24px);
                   display: block;
                   transition: all 0.2s ease;
+
                   &:hover {
                     background-color: rgba(255, 255, 255, 0.2);
                     color: var(--white);
@@ -419,10 +427,12 @@
             border-radius: 8px;
             margin: 6px 0;
             transition: all 0.3s ease;
+
             &:hover {
               background-color: rgba(255, 255, 255, 0.1);
               color: var(--white);
             }
+
             img {
               filter: brightness(0) saturate(100%) invert(100%);
               width: 16px;
@@ -435,9 +445,11 @@
             margin-top: 24px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             padding-top: 24px;
+
             &:first-of-type {
               margin-top: 32px;
             }
+
             a {
               border: 2px solid var(--white);
               border-radius: 8px;
@@ -449,13 +461,16 @@
               max-width: 300px;
               background-color: transparent;
               color: var(--white);
+
               &:hover {
                 background-color: var(--white);
                 color: var(--text-color);
               }
+
               &.btn-primary {
                 background-color: var(--white);
                 color: var(--text-color);
+
                 &:hover {
                   background-color: rgba(255, 255, 255, 0.9);
                   color: var(--text-color);
@@ -471,6 +486,7 @@
       .btn-login {
         display: none;
       }
+
       .btn-primary {
         display: none;
       }
@@ -486,6 +502,7 @@
 
 body.menu-open {
   overflow: hidden;
+
   @media (min-width: 641px) {
     overflow: auto;
   }

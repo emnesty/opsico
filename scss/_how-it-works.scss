@@ -1,0 +1,120 @@
+.how-it-works {
+  background-color: var(--how-it-works-bg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  /* CARD "Terapia individual" */
+  .individual-therapy-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 64px;
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 8px 0;
+      line-height: 130%;
+    }
+
+    p {
+      font-size: 1.7rem;
+      line-height: 160%;
+      color: var(--text-color);
+      margin: 0;
+      max-width: 1000px;
+
+      strong {
+        font-weight: 700;
+        color: var(--text-color);
+      }
+    }
+
+    @media (min-width: 768px) {
+      padding: 28px 64px;
+      border-radius: 18px;
+      margin-bottom: 56px;
+
+      h3 {
+        font-size: 2.6rem;
+      }
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .how-it-works-header {
+    text-align: center;
+    margin-bottom: 64px;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: var(--spacing-md);
+    }
+
+    p {
+      font-size: 2rem;
+      max-width: 70ch;
+      margin: 0 auto;
+      color: var(--text-color);
+    }
+  }
+
+  .how-it-works-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 64px;
+
+    .image-wrapper {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 32px;
+
+      .feature-item {
+        img {
+          width: 64px;
+          height: 64px;
+          margin-bottom: var(--spacing-sm);
+        }
+
+        h4 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: var(--text-color);
+          margin-bottom: var(--spacing-xs);
+        }
+
+        p {
+          font-size: var(--font-size-text-sm);
+          color: var(--text-color);
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  .how-it-works-actions {
+    text-align: center;
+  }
+
+  /* Responsivo */
+  @media (max-width: 1024px) {
+    .how-it-works-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+}

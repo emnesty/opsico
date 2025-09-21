@@ -148,3 +148,45 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// Header fixo no scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header");
+  const body = document.body;
+  let lastScrollTop = 0;
+  let scrollThreshold = 50; // Reduzido para ativação mais suave
+  let isFixed = false;
+
+  function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Evita processar se o scroll for muito pequeno
+    if (Math.abs(scrollTop - lastScrollTop) < 5) return;
+
+    if (scrollTop > scrollThreshold && !isFixed) {
+      header.classList.add("fixed");
+      body.classList.add("header-fixed");
+      isFixed = true;
+    } else if (scrollTop <= scrollThreshold && isFixed) {
+      header.classList.remove("fixed");
+      body.classList.remove("header-fixed");
+      isFixed = false;
+    }
+
+    lastScrollTop = scrollTop;
+  }
+
+  // Throttle otimizado da função de scroll
+  let ticking = false;
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener("scroll", requestTick, { passive: true });
+});

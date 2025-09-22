@@ -16,12 +16,10 @@
   --white: #ffffff;
   --background-default: #0d0d0e;
 
-  /* Mapeamentos de UI */
   --button-color: var(--primary);
   --button-color-rgb: 0, 36, 77;
   --text-color: var(--support);
 
-  /* Fundos derivados para manter harmonia e contraste */
   --hero-bg-color: color-mix(in srgb, var(--neutral-200) 85%, #fff);
   --card-bg-color: color-mix(in srgb, var(--neutral-200) 65%, #fff);
   --how-it-works-bg-color: color-mix(in srgb, var(--secondary) 10%, #fff);

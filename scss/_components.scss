@@ -35,15 +35,36 @@
   }
 
   // Responsividade para botões
+  @media (max-width: 1024px) {
+    padding: 18px 24px;
+    font-size: 1.55rem;
+  }
+
   @media (max-width: 768px) {
-    padding: 14px 24px;
+    padding: 16px 24px;
     font-size: 1.6rem;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 16px 20px;
+    font-size: 1.55rem;
+    min-width: 200px;
   }
 
   @media (max-width: 480px) {
     padding: 16px 20px;
     font-size: 1.5rem;
     min-height: 48px; // Para facilitar o toque em dispositivos móveis
+    min-width: unset;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 14px 16px;
+    font-size: 1.4rem;
+    min-height: 44px;
   }
 }
 

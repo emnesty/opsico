@@ -1,0 +1,82 @@
+.hero-cf {
+  background: var(--accent-2);
+  padding: 80px 0 64px;
+  text-align: left;
+
+  .copy {
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 16px;
+    text-transform: none;
+  }
+
+  h1 {
+    color: var(--white);
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin: 0 0 24px;
+    font-weight: 700;
+  }
+
+  .lead {
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  // Remove a seção de arte/imagem
+  .art {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0 48px;
+
+    .container {
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 1.6rem;
+      margin-bottom: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 48px 0 40px;
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .eyebrow {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

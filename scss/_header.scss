@@ -1,10 +1,14 @@
+/* ===========================
+   HEADER — corrigido mobile dropdown centralizado
+   =========================== */
+
 .header {
   padding: var(--spacing-lg) 0;
   position: relative;
   z-index: 1000;
   background-color: var(--white);
 
-  // Quando o menu mobile estiver ativo
+  /* Quando o menu mobile estiver ativo */
   &.menu-active {
     @media (max-width: 640px) {
       position: fixed;
@@ -61,11 +65,9 @@
       img {
         height: 40px;
         width: auto;
-
         &:not(.logo-white) {
           opacity: 0;
         }
-
         &.logo-white {
           opacity: 1;
         }
@@ -91,7 +93,6 @@
 
           .dropdown-toggle {
             cursor: pointer;
-
             img {
               transition: transform 0.3s ease;
             }
@@ -101,7 +102,6 @@
             .dropdown-toggle img {
               transform: rotate(180deg);
             }
-
             .dropdown-menu {
               opacity: 1;
               visibility: visible;
@@ -131,7 +131,6 @@
               position: absolute;
               top: -6px;
               left: 50%;
-              transform: translateX(-50%);
               width: 0;
               height: 0;
               border-left: 6px solid transparent;
@@ -217,11 +216,9 @@
         transition: all 0.3s ease;
         left: 0;
       }
-
       &::before {
         top: -9px;
       }
-
       &::after {
         bottom: -9px;
       }
@@ -229,12 +226,10 @@
 
     &.active .hamburger {
       background-color: transparent;
-
       &::before {
         top: 0;
         transform: rotate(45deg);
       }
-
       &::after {
         bottom: 0;
         transform: rotate(-45deg);
@@ -245,7 +240,6 @@
   @media (max-width: 1024px) {
     .header-actions {
       gap: var(--spacing-sm);
-
       .btn {
         padding: 10px 16px;
         font-size: 1.4rem;
@@ -272,7 +266,6 @@
       .btn-login {
         display: none;
       }
-
       .btn-primary {
         padding: 8px 12px;
         font-size: 1.3rem;
@@ -280,7 +273,7 @@
     }
   }
 
-  // === AJUSTES COMPLETOS PARA O MENU MOBILE ===
+  /* === AJUSTES COMPLETOS PARA O MENU MOBILE === */
   @media (max-width: 640px) {
     .mobile-menu-toggle {
       display: flex;
@@ -318,7 +311,6 @@
         transition: all 0.3s ease;
         z-index: -1;
       }
-
       &.active::before {
         opacity: 1;
         visibility: visible;
@@ -339,7 +331,14 @@
           &.dropdown {
             display: flex;
             flex-direction: column;
-            align-items: stretch; /* ocupa toda a largura */
+            align-items: center; /* garante centralização do submenu */
+
+            /* desabilita comportamento :hover do desktop no mobile */
+            &:hover .dropdown-menu {
+              opacity: 0;
+              visibility: hidden;
+              transform: none;
+            }
 
             .dropdown-toggle {
               position: relative;
@@ -355,20 +354,30 @@
 
             /* DROPDOWN CENTRALIZADO */
             .dropdown-menu {
+              /* reset total das props do desktop */
               position: static;
+              top: auto;
+              left: auto;
+              right: auto;
+              transform: none;
+
               opacity: 0;
               visibility: hidden;
-              transform: none;
               background: rgba(255, 255, 255, 0.1);
               box-shadow: none;
               border: 1px solid rgba(255, 255, 255, 0.2);
               border-radius: 8px;
-              margin: 8px auto 0;
+
+              /* centralização */
+              width: clamp(260px, 90vw, 420px);
+              margin: 8px auto 0; /* centraliza no eixo X */
+              align-self: center; /* garante centro mesmo com padding do container */
+              text-align: center;
+
               padding: 0;
               transition: all 0.3s ease;
               max-height: 0;
               overflow: hidden;
-              width: min(420px, 90%); /* largura fixa centralizada */
 
               &.active {
                 opacity: 1;
@@ -462,7 +471,6 @@
               &.btn-primary {
                 background-color: var(--white);
                 color: var(--text-color);
-
                 &:hover {
                   background-color: rgba(255, 255, 255, 0.9);
                   color: var(--text-color);
@@ -478,7 +486,6 @@
       .btn-login {
         display: none;
       }
-
       .btn-primary {
         display: none;
       }
@@ -494,7 +501,6 @@
 
 body.menu-open {
   overflow: hidden;
-
   @media (min-width: 641px) {
     overflow: auto;
   }

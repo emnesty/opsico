@@ -3,7 +3,8 @@
 
   .bt-header {
     max-width: 78ch;
-    margin-bottom: 64px;
+    margin: 0 auto 64px; /* centraliza o bloco */
+    text-align: center; /* centraliza textos */
 
     h2 {
       font-size: clamp(2.6rem, 2rem + 1.6vw, 4rem);
@@ -18,7 +19,8 @@
       line-height: 160%;
       color: var(--text-color);
       opacity: 0.9;
-      margin: 0;
+      margin: 0 auto; /* centraliza o parágrafo */
+      max-width: 70ch;
     }
   }
 
@@ -39,7 +41,6 @@
       height: 32px;
       margin-bottom: 16px;
       display: block;
-      /* se usar svg monocromático, pode aplicar cor via filter se quiser */
     }
 
     h3 {
@@ -138,5 +139,20 @@
     .bt-grid {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+/* ===========================
+   Casais & Famílias — header da seção centralizado
+   =========================== */
+.beneficios-terapia-cf {
+  .beneficios-terapia-cf__header {
+    max-width: 78ch;
+    margin: 0 auto 48px; /* centraliza o bloco */
+    text-align: center; /* centraliza textos */
+  }
+  .beneficios-terapia-cf__header p {
+    margin: 0 auto;
+    max-width: 70ch;
   }
 }

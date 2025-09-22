@@ -16,6 +16,21 @@
   position: relative;
   z-index: 1000;
   background-color: var(--white);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Header fixo no scroll */
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-md) 0;
+    z-index: 1001;
+  }
 
   /* Quando o menu mobile estiver ativo */
   &.menu-active {

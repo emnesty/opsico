@@ -1,0 +1,45 @@
+.para-pais {
+  padding: 88px 0;
+  background-color: var(--how-it-works-bg-color); // Fundo suave para variar
+
+  /* Cabeçalho da Seção */
+  &__header {
+    max-width: 78ch;
+    margin: 0 auto 56px;
+    text-align: center;
+
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 24px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    p {
+      font-size: var(--font-size-text-body);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+  }
+
+  /* Conteúdo com os parágrafos */
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    max-width: 1100px; // Limita a largura para melhor leitura
+    margin: 0 auto;
+
+    p {
+      font-size: 1.8rem;
+      line-height: 1.7; // Um pouco mais de espaço para leitura
+      color: var(--text-color);
+      margin: 0;
+    }
+  }
+}

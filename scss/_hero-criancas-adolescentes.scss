@@ -1,0 +1,170 @@
+.hero-ca {
+  background: var(--secondary);
+  padding: 80px 0 64px;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+
+  .copy {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .eyebrow {
+    color: var(--white);
+    font-weight: 600;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    letter-spacing: 0.3px;
+    margin-bottom: clamp(12px, 3vw, 16px);
+    text-transform: none;
+  }
+
+  h1 {
+    color: var(--white);
+    font-size: clamp(2.8rem, 6vw, 3.8rem);
+    line-height: 1.2;
+    margin: 0 0 clamp(20px, 4vw, 24px);
+    font-weight: 700;
+  }
+
+  .lead {
+    color: var(--white);
+    font-size: clamp(1.6rem, 3.5vw, 1.8rem);
+    line-height: 1.6;
+    margin-bottom: clamp(24px, 5vw, 32px);
+    opacity: 0.9;
+    max-width: none;
+  }
+
+  .actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      min-width: 200px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  // Remove a seção de arte/imagem
+  .art {
+    display: none;
+  }
+
+  /* Breakpoints específicos para melhor responsividade */
+
+  /* Tablets landscape */
+  @media (max-width: 1024px) {
+    padding: 70px 0 56px;
+
+    .lead {
+      max-width: 90%;
+    }
+  }
+
+  /* Tablets portrait */
+  @media (max-width: 768px) {
+    padding: 60px 0 48px;
+    text-align: center;
+
+    .container {
+      align-items: center;
+      text-align: center;
+    }
+
+    .copy {
+      text-align: center;
+    }
+
+    .actions {
+      justify-content: center;
+      gap: var(--spacing-sm);
+    }
+  }
+
+  /* Smartphones landscape */
+  @media (max-width: 640px) {
+    padding: 50px 0 40px;
+
+    .actions {
+      flex-direction: column;
+      gap: var(--spacing-md);
+      width: 100%;
+
+      .btn {
+        width: 100%;
+        min-width: unset;
+        max-width: 300px;
+      }
+    }
+  }
+
+  /* Smartphones portrait */
+  @media (max-width: 480px) {
+    padding: 40px 0 32px;
+
+    .actions .btn {
+      max-width: none;
+      padding: 14px var(--spacing-lg);
+      font-size: 1.6rem;
+    }
+  }
+
+  /* Smartphones pequenos */
+  @media (max-width: 360px) {
+    padding: 32px 0 24px;
+
+    .actions .btn {
+      padding: 12px var(--spacing-md);
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Melhorias para touch e interação */
+  .actions .btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  /* Safe area para dispositivos com notch */
+  @supports (padding: env(safe-area-inset-top)) {
+    padding-top: calc(80px + env(safe-area-inset-top));
+
+    @media (max-width: 768px) {
+      padding-top: calc(60px + env(safe-area-inset-top));
+    }
+
+    @media (max-width: 480px) {
+      padding-top: calc(40px + env(safe-area-inset-top));
+    }
+  }
+
+  /* Orientation adjustments */
+  @media (max-height: 640px) and (orientation: landscape) {
+    padding: 40px 0 32px;
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      line-height: 1.1;
+    }
+
+    .lead {
+      font-size: clamp(1.4rem, 3vw, 1.6rem);
+      line-height: 1.4;
+    }
+  }
+}

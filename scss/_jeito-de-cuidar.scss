@@ -1,0 +1,142 @@
+/* ===========================
+   Nosso Jeito de Cuidar — cards
+   =========================== */
+
+.jeito-de-cuidar {
+  padding: 88px 0;
+  background-color: var(--how-it-works-bg-color);
+
+  /* Cabeçalho */
+  &__header {
+    max-width: 78ch;
+    margin: 0 auto 32px;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2.6rem, 2rem + 1.6vw, 4rem);
+      font-weight: 700;
+      color: var(--text-color);
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+    p {
+      font-size: var(--font-size-text-body);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+  }
+
+  /* Imagem Principal */
+  &__image {
+    margin: 0 0 40px;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+      max-height: 460px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  /* Grid de cards */
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  /* Card base */
+  .jdc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    min-height: 180px;
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      margin-bottom: 6px;
+
+      img {
+        width: 22px;
+        height: 22px;
+        display: block;
+      }
+    }
+
+    h3 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.95;
+      margin: 0;
+      max-width: 48ch;
+    }
+  }
+
+  /* Variações de cor para ficar como a referência */
+  .jdc-card--cream {
+    background: color-mix(in srgb, var(--accent-3) 16%, #fffbe9);
+    border-color: color-mix(in srgb, var(--accent-3) 32%, #fff);
+    .jdc-card__icon {
+      border-color: color-mix(in srgb, var(--accent-3) 35%, #fff);
+    }
+  }
+  .jdc-card--mint {
+    background: color-mix(in srgb, var(--support) 18%, #e9fbf3);
+    border-color: color-mix(in srgb, var(--support) 35%, #fff);
+    .jdc-card__icon {
+      border-color: color-mix(in srgb, var(--support) 40%, #fff);
+    }
+  }
+  .jdc-card--sky {
+    background: color-mix(in srgb, var(--secondary) 18%, #eaf5ff);
+    border-color: color-mix(in srgb, var(--secondary) 40%, #fff);
+    .jdc-card__icon {
+      border-color: color-mix(in srgb, var(--secondary) 40%, #fff);
+    }
+  }
+
+  /* CTA */
+  &__cta {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Responsivo */
+  @media (max-width: 992px) {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 64px 0;
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    .jdc-card p {
+      max-width: none;
+    }
+  }
+}

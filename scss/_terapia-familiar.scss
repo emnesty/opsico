@@ -1,0 +1,130 @@
+.tf {
+  padding: 72px 0 40px;
+
+  &__header {
+    max-width: 78ch;
+    margin: 0 0 32px;
+    h2 {
+      color: var(--primary);
+      font-size: clamp(2.4rem, 1.6rem + 2vw, 3.2rem);
+      line-height: 1.25;
+      margin: 0 0 10px;
+    }
+    p {
+      color: color-mix(in srgb, var(--primary) 70%, #000);
+      font-size: 1.8rem;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 72ch;
+    }
+  }
+
+  /* quadro “Quando procurar” */
+  &__quadro {
+    background: color-mix(in srgb, var(--neutral-200) 55%, #fff);
+    border: 1px solid color-mix(in srgb, var(--neutral-200) 80%, #fff);
+    border-radius: 16px;
+    padding: 28px;
+    margin: 28px 0 56px;
+
+    &-title {
+      text-align: center;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin: 4px 0 18px;
+    }
+
+    &-grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px 36px;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: color-mix(in srgb, var(--primary) 75%, #000);
+        line-height: 1.55;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+  }
+
+  /* benefícios */
+  &__header--beneficios {
+    margin-top: 8px;
+  }
+
+  &__beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .tf-card {
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 18px 20px;
+    p {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: var(--text-color);
+    }
+  }
+
+  /* cores suaves inspiradas na paleta */
+  .tf-card--a {
+    background: color-mix(in srgb, var(--accent-4) 25%, #fff);
+    border-color: color-mix(in srgb, var(--accent-4) 40%, #fff);
+  }
+  .tf-card--b {
+    background: color-mix(in srgb, var(--support) 18%, #e9fbf3);
+    border-color: color-mix(in srgb, var(--support) 35%, #fff);
+  }
+  .tf-card--c {
+    background: color-mix(in srgb, var(--secondary) 18%, #eaf5ff);
+    border-color: color-mix(in srgb, var(--secondary) 40%, #fff);
+  }
+
+  .tf-card--full {
+    grid-column: 1 / -1;
+    background: color-mix(in srgb, var(--accent-2) 16%, #f7edff);
+    border-color: color-mix(in srgb, var(--accent-2) 35%, #fff);
+  }
+
+  /* responsivo */
+  @media (max-width: 1024px) {
+    &__quadro-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__beneficios {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 56px 0 32px;
+
+    &__header {
+      margin-bottom: 24px;
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__quadro {
+      padding: 22px;
+      &-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+    &__beneficios {
+      grid-template-columns: 1fr;
+    }
+  }
+}

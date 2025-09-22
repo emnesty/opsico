@@ -1,0 +1,121 @@
+/* ===========================
+   Benefícios — Casais & Famílias
+   =========================== */
+
+.beneficios-terapia-cf {
+  padding: 88px 0;
+
+  /* Cabeçalho */
+  &__header {
+    max-width: 78ch;
+    margin: 0 auto 48px;
+    text-align: center;
+
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 24px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+  }
+
+  /* Imagem ilustrativa */
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 28px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 64px;
+    }
+  }
+
+  /* Conteúdo e cartões */
+  &__content {
+    margin-top: 8px;
+  }
+
+  &__benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .benefit-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 18px 20px;
+
+    h3 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 8px;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      margin: 0;
+    }
+  }
+
+  /* Paleta suave para cada cartão */
+  .benefit-card:nth-child(1) {
+    background: #fef7ed;
+  }
+  .benefit-card:nth-child(2) {
+    background: #ecfdf5;
+  }
+  .benefit-card:nth-child(3) {
+    background: #eff6ff;
+  }
+  .benefit-card:nth-child(4) {
+    background: #fef7ed;
+  }
+  .benefit-card:nth-child(5) {
+    background: #ecfdf5;
+  }
+  .benefit-card:nth-child(6) {
+    background: #eff6ff;
+  }
+
+  /* CTA */
+  &__cta {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Responsivo */
+  @media (max-width: 1024px) {
+    &__benefits {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    padding: 64px 0;
+
+    &__header p {
+      font-size: 1.6rem;
+    }
+    &__benefits {
+      grid-template-columns: 1fr;
+    }
+  }
+}

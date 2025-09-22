@@ -1,0 +1,134 @@
+/* ===========================
+   Terapia Familiar
+   =========================== */
+
+.terapia-familiar {
+  padding: 88px 0;
+  background-color: var(--how-it-works-bg-color); // Um fundo suave para diferenciar
+
+  h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 24px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  /* Cabeçalho da Seção */
+  &__header {
+    max-width: 78ch;
+    margin: 0 auto 64px;
+    text-align: center;
+
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 24px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    p {
+      font-size: var(--font-size-text-body);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+  }
+
+  /* Divisores para 'Quando Procurar' e 'Benefícios' */
+  &__quando-procurar,
+  &__beneficios {
+    margin-bottom: 64px;
+  }
+
+  &__beneficios {
+    margin-bottom: 0; // Remove a margem do último elemento
+  }
+
+  /* Grid Genérico */
+  &__grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  /* Grid Específico para 'Quando Procurar' */
+  &__grid--quando-procurar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Grid Específico para 'Benefícios' */
+  &__grid--beneficios {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Estilos dos Cards */
+  .card {
+    padding: 24px;
+    border-radius: 12px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    p {
+      margin: 0;
+      color: var(--text-color);
+    }
+  }
+
+  .card--info {
+    background-color: var(--white);
+    border: 1px solid #e5e7eb; // Borda sutil
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card--beneficio {
+    strong {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    // Paleta de cores inspirada na imagem
+    &-amarelo {
+      background-color: #fef7ed;
+    }
+    &-verde {
+      background-color: #ecfdf5;
+    }
+    &-azul {
+      background-color: #eff6ff;
+    }
+    &-rosa {
+      background-color: #fdf2f8; // Cor nova para o quarto benefício
+    }
+  }
+
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    &__grid--quando-procurar {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__grid--beneficios {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 64px 0;
+
+    &__header p {
+      font-size: 1.6rem;
+    }
+    &__grid--quando-procurar,
+    &__grid--beneficios {
+      grid-template-columns: 1fr;
+    }
+  }
+}

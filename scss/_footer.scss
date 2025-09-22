@@ -1,7 +1,7 @@
 .site-footer {
   --footer-bg: var(--primary);
-  --footer-text: var(--neutral-200);
-  --footer-dim: var(--neutral-200);
+  --footer-text: var(--white);
+  --footer-dim: rgba(255, 255, 255, 0.8);
   --footer-line: rgba(255, 255, 255, 0.18);
 
   background: var(--footer-bg);
@@ -23,7 +23,7 @@
 
   .footer-brand {
     .logo img {
-      height: 120px;
+      height: 40px;
       width: auto;
       display: block;
       filter: brightness(0) saturate(100%) invert(100%); /* garante branco */

@@ -1,0 +1,107 @@
+.diferenciais {
+  padding: 88px 0;
+
+  /* Cabeçalho da Seção */
+  &__header {
+    max-width: 78ch;
+    margin: 0 auto 64px;
+    text-align: center;
+
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 24px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    p {
+      font-size: var(--font-size-text-body);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+  }
+
+  /* Conteúdo principal (Grid de 2 colunas) */
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    align-items: center;
+  }
+
+  /* Lista de diferenciais (coluna da esquerda) */
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .diferencial-item {
+    h3 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 8px;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0;
+    }
+  }
+
+  /* Imagem (coluna da direita) */
+  &__image {
+    margin: 0;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 4 / 5; // Proporção elegante para a imagem
+    }
+  }
+
+  /* Botão de CTA */
+  &__cta {
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Responsividade */
+  @media (max-width: 992px) {
+    &__content {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 64px 0;
+
+    &__content {
+      grid-template-columns: 1fr; // Colunas empilhadas
+    }
+
+    &__image {
+      order: -1; // Imagem aparece primeiro no mobile
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    &__header {
+      margin-bottom: 48px;
+    }
+
+    &__cta {
+      margin-top: 48px;
+    }
+  }
+}

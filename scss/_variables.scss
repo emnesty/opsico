@@ -1,21 +1,37 @@
-// Paleta de Cores
+/* Paleta OPSICO 
+1 #00244D  2 #1D558F  3 #48179B  4 #6D45AF
+5 #E5792F  6 #EA9459  7 #BA9E83  8 #E3CCAD  9 #006765
+*/
 :root {
-  --button-color: #195059;
-  --button-color-rgb: 25, 80, 89;
-  --text-color: #005c65;
-  --hero-bg-color: #dcfae6;
-  --card-bg-color: #f0fbf8;
-  --how-it-works-bg-color: #fdffdd;
+  /* Tokens de cor */
+  --primary: #00244d;
+  --secondary: #1d558f;
+  --accent-1: #48179b;
+  --accent-2: #6d45af;
+  --accent-3: #e5792f;
+  --accent-4: #ea9459;
+  --neutral-700: #ba9e83;
+  --neutral-200: #e3ccad;
+  --support: var(--primary);
   --white: #ffffff;
-  --secondary: #6941c6;
   --background-default: #0d0d0e;
 
-  // Fontes
-  --font-family-primary: "Source Serif 4", serif;
-  --font-size-text-body: 1.8rem; // Equivalente a 18px
-  --font-size-text-sm: 1.8rem; // Equivalente a 16px
+  /* Mapeamentos de UI */
+  --button-color: var(--primary);
+  --button-color-rgb: 0, 36, 77;
+  --text-color: var(--support);
 
-  // Espaçamento
+  /* Fundos derivados para manter harmonia e contraste */
+  --hero-bg-color: color-mix(in srgb, var(--neutral-200) 85%, #fff);
+  --card-bg-color: color-mix(in srgb, var(--neutral-200) 65%, #fff);
+  --how-it-works-bg-color: color-mix(in srgb, var(--secondary) 10%, #fff);
+
+  /* Fontes */
+  --font-family-primary: "Source Serif 4", serif;
+  --font-size-text-body: 1.8rem;
+  --font-size-text-sm: 1.8rem;
+
+  /* Espaçamento */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;

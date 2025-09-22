@@ -1,7 +1,7 @@
 .site-footer {
-  --footer-bg: #0b6267; /* teal escuro do layout */
-  --footer-text: rgba(255, 255, 255, 0.92);
-  --footer-dim: rgba(255, 255, 255, 0.64);
+  --footer-bg: var(--primary);
+  --footer-text: var(--neutral-200);
+  --footer-dim: var(--neutral-200);
   --footer-line: rgba(255, 255, 255, 0.18);
 
   background: var(--footer-bg);

@@ -56,41 +56,37 @@
     gap: 12px;
     padding: 28px;
     border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     min-height: 180px;
 
     &__icon {
       width: 40px;
       height: 40px;
-      border-radius: 10px;
       display: grid;
       place-items: center;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.06);
       margin-bottom: 6px;
 
       img {
-        width: 22px;
-        height: 22px;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 16px;
         display: block;
       }
     }
 
     h3 {
-      font-size: 1.9rem;
+      font-size: 2rem;
       font-weight: 700;
-      color: var(--primary);
-      margin: 0;
+      color: var(--text-color);
+      margin: 0 0 10px 0;
     }
 
     p {
       font-size: 1.6rem;
-      line-height: 1.6;
+      line-height: 160%;
       color: var(--text-color);
       opacity: 0.95;
       margin: 0;
-      max-width: 48ch;
+      max-width: 40ch;
     }
   }
 

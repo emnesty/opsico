@@ -1,0 +1,181 @@
+// Benefícios NR-1 - Seção específica para página NR-1
+.beneficios-nr1 {
+  padding: 88px 0;
+
+  .beneficios-nr1__header {
+    max-width: 78ch;
+    margin: 0 auto 64px;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2.6rem, 2rem + 1.6vw, 4rem);
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 16px 0;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 160%;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+  }
+
+  .beneficios-nr1__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .beneficio-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    .beneficio-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 160%;
+      color: var(--text-color);
+      opacity: 0.95;
+      margin: 0;
+      max-width: 40ch;
+    }
+  }
+
+  // Cores específicas para cada card
+  .beneficio-card--rosa {
+    background: #fdf2f8;
+    border-color: #fce7f3;
+
+    .beneficio-number {
+      background: var(--accent-2); // rosa
+    }
+  }
+
+  .beneficio-card--roxo {
+    background: #f4f6ff;
+    border-color: #e6ebff;
+
+    .beneficio-number {
+      background: var(--accent-1); // roxo
+    }
+  }
+
+  .beneficio-card--laranja {
+    background: #fff7e6;
+    border-color: #ffefcc;
+
+    .beneficio-number {
+      background: var(--accent-3); // laranja
+    }
+  }
+
+  .beneficio-card--azul {
+    background: #eaf5ff;
+    border-color: #d6ecff;
+
+    .beneficio-number {
+      background: var(--secondary); // azul
+    }
+  }
+
+  .beneficio-card--verde {
+    background: #f0fdf4;
+    border-color: #dcfce7;
+
+    .beneficio-number {
+      background: var(--accent-4); // verde
+    }
+  }
+
+  .beneficio-card--azul-escuro {
+    background: #e9fbf3;
+    border-color: #d4f6e7;
+
+    .beneficio-number {
+      background: var(--primary); // azul escuro
+    }
+  }
+
+  // CTA da seção
+  .beneficios-nr1__cta {
+    margin-top: 64px;
+    text-align: center;
+
+    .cta-text {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin: 0 0 24px 0;
+      max-width: 60ch;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 140%;
+    }
+  }
+
+  // Responsivo
+  @media (max-width: 1024px) {
+    .beneficios-nr1__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 64px 0;
+
+    .beneficios-nr1__header p {
+      font-size: 1.6rem;
+    }
+
+    .beneficios-nr1__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .beneficio-card .beneficio-number {
+      width: 40px;
+      height: 40px;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .beneficios-nr1__cta {
+      margin-top: 48px;
+
+      .cta-text {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 56px 0;
+  }
+}

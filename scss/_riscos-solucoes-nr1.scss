@@ -1,0 +1,243 @@
+.riscos-solucoes-nr1 {
+  overflow: hidden;
+  background: var(--white);
+  padding: 96px 0 128px;
+  position: relative;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  .riscos-solucoes-nr1__wrapper {
+    position: relative;
+    isolation: isolate;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+
+  .riscos-solucoes-nr1__content {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1000px;
+    flex-direction: column;
+    gap: 64px;
+    padding: 64px 24px;
+
+    @media (min-width: 640px) {
+      padding: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0;
+      max-width: none;
+      flex-direction: row;
+      align-items: center;
+      padding: 80px;
+      gap: 80px;
+    }
+
+    @media (min-width: 1280px) {
+      gap: 128px;
+      padding: 80px 80px;
+    }
+  }
+
+  .riscos-solucoes-nr1__image {
+    height: 384px;
+    width: 100%;
+    flex: none;
+    border-radius: 16px;
+    object-fit: cover;
+
+    @media (min-width: 1024px) {
+      aspect-ratio: 1 / 1;
+      height: auto;
+      max-width: 384px;
+    }
+  }
+
+  .riscos-solucoes-nr1__text {
+    width: 100%;
+    flex: auto;
+
+    h2 {
+      font-size: clamp(2.8rem, 4vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--text-color);
+      margin-bottom: clamp(24px, 4vw, 32px);
+
+      @media (min-width: 640px) {
+        font-size: clamp(3.2rem, 4.5vw, 5rem);
+      }
+    }
+
+    .section-description {
+      margin-top: 24px;
+      font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.85;
+    }
+  }
+
+  .riscos-grid,
+  .solucoes-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    font-size: clamp(1.5rem, 2.2vw, 1.7rem);
+    line-height: 1.4;
+    color: var(--text-color);
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 32px;
+      gap: 12px 32px;
+    }
+  }
+
+  .risk-item,
+  .solution-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+
+    .icon {
+      height: 28px;
+      width: 20px;
+      flex: none;
+      color: var(--accent-1);
+      margin-top: 2px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .content {
+      flex: 1;
+
+      strong {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .section-divider {
+    margin: 48px 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 103, 101, 0.2), transparent);
+
+    @media (min-width: 768px) {
+      margin: 56px 0;
+    }
+  }
+
+  .riscos-solucoes-nr1__cta {
+    margin-top: 40px;
+    display: flex;
+
+    a {
+      font-size: 1.4rem;
+      line-height: 1.4;
+      font-weight: 600;
+      color: var(--accent-1);
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  // Background decoration
+  .riscos-solucoes-nr1__bg-decoration {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -64px;
+    z-index: -10;
+    display: flex;
+    transform: translateX(0) scale(1);
+    justify-content: center;
+    overflow: hidden;
+    filter: blur(48px);
+
+    .gradient-shape {
+      aspect-ratio: 1318 / 752;
+      width: 82.375rem;
+      flex: none;
+      background: linear-gradient(to right, rgba(159, 214, 252, 0.5), rgba(134, 128, 253, 0.5));
+      clip-path: polygon(
+        73.6% 51.7%,
+        91.7% 11.8%,
+        100% 46.4%,
+        97.4% 82.2%,
+        92.5% 84.9%,
+        75.7% 64%,
+        55.3% 47.5%,
+        46.5% 49.4%,
+        45% 62.9%,
+        50.3% 87.2%,
+        21.3% 64.1%,
+        0.1% 100%,
+        5.4% 51.1%,
+        21.4% 63.9%,
+        58.9% 0.2%,
+        73.6% 51.7%
+      );
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    padding: 64px 0 80px;
+
+    .riscos-solucoes-nr1__content {
+      gap: 40px;
+      padding: 40px 20px;
+      border-radius: 16px;
+    }
+
+    .riscos-grid,
+    .solucoes-grid {
+      margin-top: 32px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .section-divider {
+      margin: 40px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 48px 0 64px;
+
+    .riscos-solucoes-nr1__content {
+      gap: 32px;
+      padding: 32px 16px;
+    }
+
+    .risk-item,
+    .solution-item {
+      gap: 8px;
+
+      .icon {
+        height: 24px;
+        width: 18px;
+      }
+    }
+  }
+}

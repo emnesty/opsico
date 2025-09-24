@@ -358,3 +358,94 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(diferenciais)
   }
 })
+
+// Cookie Consent Management
+document.addEventListener("DOMContentLoaded", function () {
+  const COOKIE_CONSENT_KEY = "opsico_cookie_consent"
+  const cookieConsent = document.getElementById("cookie-consent")
+
+  // Check if user has already given consent
+  function checkCookieConsent() {
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY)
+    return consent === "accepted"
+  }
+
+  // Show cookie consent banner
+  function showCookieConsent() {
+    if (cookieConsent) {
+      cookieConsent.classList.remove("hidden")
+      cookieConsent.classList.add("animate-in")
+
+      // Add show class after a brief delay for animation
+      setTimeout(() => {
+        cookieConsent.classList.add("show")
+      }, 10)
+    }
+  }
+
+  // Hide cookie consent banner
+  function hideCookieConsent() {
+    if (cookieConsent) {
+      cookieConsent.classList.remove("show")
+
+      // Wait for animation to complete before hiding
+      setTimeout(() => {
+        cookieConsent.classList.add("hidden")
+        cookieConsent.classList.remove("animate-in")
+      }, 300)
+    }
+  }
+
+  // Save cookie consent to localStorage
+  function saveCookieConsent(status) {
+    localStorage.setItem(COOKIE_CONSENT_KEY, status)
+  }
+
+  // Initialize cookie consent banner
+  function initCookieConsent() {
+    if (!checkCookieConsent()) {
+      // Delay showing the banner by 1 second for better UX
+      setTimeout(showCookieConsent, 1000)
+    }
+  }
+
+  // Initialize on page load
+  initCookieConsent()
+})
+
+// Global functions for cookie consent actions
+function acceptCookies() {
+  const COOKIE_CONSENT_KEY = "opsico_cookie_consent"
+  const cookieConsent = document.getElementById("cookie-consent")
+
+  // Save consent
+  localStorage.setItem(COOKIE_CONSENT_KEY, "accepted")
+
+  // Hide banner
+  if (cookieConsent) {
+    cookieConsent.classList.remove("show")
+    setTimeout(() => {
+      cookieConsent.classList.add("hidden")
+    }, 300)
+  }
+
+  // Here you can add your cookie/analytics initialization
+  // initializeAnalytics();
+  // initializeTrackingPixels();
+
+  console.log("Cookies aceitos pelo usuário")
+}
+
+function manageCookiePreferences() {
+  // For now, redirect to cookie policy page
+  // In the future, you could open a modal with detailed preferences
+  window.open("./politica-cookies.html", "_blank")
+
+  console.log("Gerenciar preferências de cookies")
+}
+
+// Function to reset cookie consent (useful for testing)
+function resetCookieConsent() {
+  localStorage.removeItem("opsico_cookie_consent")
+  location.reload()
+}

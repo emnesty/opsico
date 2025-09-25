@@ -1,0 +1,264 @@
+// Resultados OPSICO Section Styles
+.resultados-opsico {
+  padding: 80px 0 64px;
+  background: #f8fafc;
+  color: var(--text-color);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  .resultados-opsico__header {
+    text-align: center;
+    margin-bottom: clamp(40px, 6vw, 64px);
+
+    h2 {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: clamp(16px, 3vw, 24px);
+      line-height: 1.2;
+    }
+  }
+
+  .resultados-opsico__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 48px);
+    align-items: center;
+  }
+
+  .resultados-opsico__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(24px, 4vw, 32px);
+  }
+
+  .stat-item {
+    background: var(--white);
+    padding: clamp(24px, 4vw, 32px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 103, 101, 0.08);
+    border: 1px solid rgba(0, 103, 101, 0.1);
+    text-align: center;
+
+    .stat-number {
+      display: block;
+      font-size: clamp(3.2rem, 5vw, 4.8rem);
+      font-weight: 700;
+      color: var(--accent-1);
+      line-height: 1.1;
+      margin-bottom: clamp(12px, 2vw, 16px);
+    }
+
+    .stat-description {
+      font-size: clamp(1.4rem, 2.2vw, 1.6rem);
+      line-height: 1.5;
+      color: var(--text-color);
+      opacity: 0.85;
+      margin: 0;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    padding: 64px 0 56px;
+
+    .resultados-opsico__stats {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: clamp(20px, 3vw, 24px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 56px 0 48px;
+
+    .resultados-opsico__stats {
+      grid-template-columns: 1fr;
+      gap: clamp(16px, 3vw, 20px);
+    }
+
+    .stat-item {
+      padding: clamp(20px, 3vw, 24px);
+
+      .stat-number {
+        font-size: clamp(2.8rem, 4.5vw, 3.6rem);
+      }
+
+      .stat-description {
+        font-size: clamp(1.3rem, 2vw, 1.5rem);
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 48px 0 40px;
+
+    .resultados-opsico__header {
+      margin-bottom: clamp(32px, 5vw, 40px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0 32px;
+
+    .stat-item {
+      padding: clamp(16px, 3vw, 20px);
+
+      .stat-number {
+        font-size: clamp(2.4rem, 4vw, 3.2rem);
+        margin-bottom: clamp(8px, 1.5vw, 12px);
+      }
+
+      .stat-description {
+        font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+// Rede de Especialistas Section Styles
+.rede-especialistas {
+  padding: 88px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .rede-especialistas__header {
+    max-width: 78ch;
+    margin: 0 auto 64px;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2.6rem, 2rem + 1.6vw, 4rem);
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 16px 0;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 160%;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+  }
+
+  .rede-especialistas__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .especialista-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    .especialista-icon {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0 0 10px 0;
+      margin-top: 64px;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 160%;
+      color: var(--text-color);
+      opacity: 0.95;
+      margin: 0;
+      max-width: 40ch;
+    }
+  }
+
+  /* cores suaves por cartão */
+  .especialista-a {
+    background: #f4f6ff;
+    border-color: #e6ebff;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .especialista-b {
+    background: #fff7e6;
+    border-color: #ffefcc;
+  }
+
+  .especialista-c {
+    background: #eaf5ff;
+    border-color: #d6ecff;
+  }
+
+  .especialista-d {
+    background: #e9fbf3;
+    border-color: #d4f6e7;
+  }
+
+  .rede-especialistas__cta {
+    text-align: center;
+    margin-top: clamp(40px, 6vw, 56px);
+    padding-top: clamp(32px, 5vw, 40px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+    .btn {
+      min-width: 220px;
+      padding: 16px 32px;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  /* responsivo */
+  @media (max-width: 1024px) {
+    .rede-especialistas__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 64px 0;
+
+    .rede-especialistas__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rede-especialistas__header h2 {
+      font-size: clamp(2.4rem, 2rem + 1.4vw, 3.2rem);
+    }
+
+    .rede-especialistas__header p {
+      font-size: 1.6rem;
+    }
+
+    .rede-especialistas__cta {
+      margin-top: clamp(32px, 5vw, 40px);
+      padding-top: clamp(24px, 4vw, 32px);
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+        min-width: unset;
+      }
+    }
+  }
+}

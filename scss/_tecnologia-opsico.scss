@@ -1,0 +1,136 @@
+/* Seção Tecnologia OPSICO */
+.tecnologia-opsico {
+  padding: 8rem 0;
+  background: #f0f4f8;
+
+  .container {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.8rem;
+      color: var(--text-color);
+      line-height: 1.5;
+      opacity: 0.85;
+
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 3rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__feature {
+    background: #ffffff;
+    padding: 4rem;
+    border-radius: 1.2rem;
+    border: 1px solid #e1e8ed;
+    position: relative;
+
+    @media (max-width: 768px) {
+      padding: 3rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 0 1.2rem 0 1.2rem;
+      opacity: 0.1;
+    }
+
+    &--insights::after {
+      background: #4a90e2;
+    }
+
+    &--gestao::after {
+      background: #50c878;
+    }
+
+    &--rh::after {
+      background: #ff6b6b;
+    }
+
+    .icon {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      @media (max-width: 768px) {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      img {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+      &--insights {
+        background: #e8f4f8;
+      }
+
+      &--gestao {
+        background: #e8f5e8;
+      }
+
+      &--rh {
+        background: #ffe8e8;
+      }
+    }
+
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+
+      @media (max-width: 768px) {
+        font-size: 1.9rem;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      opacity: 0.85;
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

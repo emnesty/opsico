@@ -1,0 +1,178 @@
+/* Seção Produtividade e Bem-estar */
+.produtividade-bem-estar {
+  padding: 8rem 0;
+  background: #fafbfc;
+
+  .container {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 60rem;
+      font-size: 1.6rem;
+      color: #4a5568;
+      line-height: 1.6;
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 3rem;
+    align-items: stretch;
+
+    @media (max-width: 768px) {
+      gap: 2rem;
+    }
+  }
+
+  &__card {
+    background: #ffffff;
+    border-radius: 0.8rem;
+    padding: 3rem;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    height: 100%;
+
+    @media (max-width: 768px) {
+      padding: 2.4rem;
+      gap: 1.4rem;
+    }
+  }
+
+  &__card--stat {
+    background: #f8fafc;
+    border-color: #cbd5e0;
+  }
+
+  &__eyebrow {
+    font-size: var(--font-size-text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+
+  .stat-number {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #2b6cb0;
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    color: #4a5568;
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__source {
+    font-size: 1.3rem;
+    color: #718096;
+    font-style: italic;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a2332;
+    margin: 0 0 1.8rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+  }
+
+  &__list-item .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: #e2f4ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-image: url("../img/icons/checkbox-circle-line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.4rem;
+
+    @media (max-width: 768px) {
+      width: 2rem;
+      height: 2rem;
+      background-size: 1.2rem;
+    }
+  }
+
+  &__list-item .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    h4 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #1a2332;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #4a5568;
+      line-height: 1.5;
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

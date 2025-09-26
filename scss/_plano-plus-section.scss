@@ -1,0 +1,332 @@
+// Plano Plus Section - Clean & Minimalist Design
+.plano-plus-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  // Primeira parte: preço + coluna de chamada com botões lado a lado
+  .price-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e2e8f0;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+    }
+
+    .price-content {
+      .plan-card {
+        background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        border-radius: 24px;
+        padding: 40px;
+        color: white;
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        .plan-title {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+          letter-spacing: -0.02em;
+        }
+
+        .plan-price {
+          font-size: 3.2rem;
+          font-weight: 800;
+          margin-bottom: 20px;
+          line-height: 1;
+        }
+
+        .plan-description {
+          font-size: 1rem;
+          opacity: 0.95;
+          line-height: 1.6;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // Coluna direita: título + texto + botões lado a lado
+    .cta-column {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+
+      .start-content {
+        .section-title {
+          font-size: 3.2rem;
+          font-weight: 800;
+          color: var(--text-color);
+          margin-bottom: 12px;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+          font-size: 2.4rem;
+          color: var(--text-color);
+          line-height: 1.6;
+          max-width: 46ch;
+          margin: 0;
+        }
+      }
+      .action-buttons {
+        align-self: center;
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .btn {
+          font-size: 1.3rem;
+          padding: 20px 32px;
+          min-width: 240px;
+        }
+
+        .btn-secondary {
+          background: transparent;
+          color: #ff6b35;
+          border: 2px solid #ff6b35;
+          font-weight: 600;
+          border-radius: 8px;
+          text-decoration: none;
+          display: inline-block;
+          text-align: center;
+          font-size: 1.3rem;
+          padding: 20px 32px;
+          min-width: 240px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #ffe8d8;
+            color: #b5471f !important;
+            border-color: #f97316;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cta-column {
+        align-items: center;
+        text-align: center;
+
+        .start-content .section-subtitle {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          width: 100%;
+
+          .btn,
+          .btn-secondary {
+            width: 100%;
+            max-width: 400px;
+          }
+        }
+      }
+    }
+  }
+
+  // Segunda parte: benefícios e imagem
+  .why-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+      text-align: center;
+    }
+
+    .why-content {
+      .why-title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 20px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+      }
+
+      .why-subtitle {
+        font-size: 2.4rem;
+        color: var(--text-color);
+        margin-bottom: 40px;
+        line-height: 1.7;
+      }
+
+      .benefits-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .benefit-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 32px;
+          padding: 24px;
+          background: white;
+          border-radius: 16px;
+          border: 1px solid #e2e8f0;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            border: 1px solid #e2e8f0;
+
+            img {
+              width: 24px;
+              height: 24px;
+              filter: invert(44%) sepia(75%) saturate(2076%) hue-rotate(346deg) brightness(97%) contrast(96%);
+            }
+          }
+
+          .benefit-content {
+            .benefit-title {
+              font-size: 2rem;
+              font-weight: 600;
+              color: #1e293b;
+              margin-bottom: 8px;
+              line-height: 1.45;
+            }
+
+            .benefit-description {
+              font-size: 1.65rem;
+              color: var(--text-color);
+              line-height: 1.7;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .visual-side {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .phone-mockup {
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+
+        .phone-image {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          border: 1px solid #e2e8f0;
+        }
+      }
+    }
+  }
+
+  // Responsivo
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    .price-section {
+      .price-content {
+        .plan-card {
+          margin-bottom: 30px;
+
+          .plan-title {
+            font-size: 2rem;
+          }
+
+          .plan-price {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+
+    .why-wrapper {
+      .why-content {
+        .why-title {
+          font-size: 2.4rem;
+        }
+
+        .benefits-list .benefit-item {
+          padding: 20px;
+          margin-bottom: 24px;
+
+          .benefit-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .benefit-content {
+            .benefit-title {
+              font-size: 1.5rem;
+              line-height: 1.4;
+            }
+
+            .benefit-description {
+              font-size: 1.2rem;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+
+      .visual-side {
+        .phone-mockup {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 16px;
+    }
+
+    .price-section {
+      .price-content {
+        .plan-card {
+          padding: 32px 24px;
+        }
+      }
+    }
+  }
+}

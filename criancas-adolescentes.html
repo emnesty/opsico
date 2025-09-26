@@ -3,39 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terapia Online para Casais e Famílias | OPSICO - Fortaleça Seus Laços</title>
+    <title>Terapia Online para Crianças e Adolescentes | OPSICO</title>
     <meta
       name="description"
-      content="Terapia online para casais e famílias no OPSICO. Fortaleça seus laços com sessões seguras e sigilosas, no conforto do seu lar. Psicólogos especializados em terapia familiar e de casal." />
+      content="Terapia online para crianças e adolescentes no OPSICO. Um espaço seguro para expressão e regulação emocional com apoio profissional especializado." />
     <meta
       name="keywords"
-      content="terapia de casal, terapia familiar, terapia online casais, psicologia familiar, relacionamento, casais, famílias, terapia conjugal, OPSICO" />
+      content="terapia infantil, psicologia infantil, terapia adolescentes, psicologia online crianças, OPSICO" />
     <meta name="author" content="OPSICO" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://opsico.com.br/casais-familias.html" />
-    <meta
-      property="og:title"
-      content="Terapia Online para Casais e Famílias | OPSICO - Fortaleça Seus Laços" />
+    <meta property="og:url" content="https://opsico.com.br/criancas-adolescentes.html" />
+    <meta property="og:title" content="Terapia Online para Crianças e Adolescentes | OPSICO" />
     <meta
       property="og:description"
-      content="Terapia online para casais e famílias no OPSICO. Fortaleça seus laços com sessões seguras e sigilosas, no conforto do seu lar. Psicólogos especializados em terapia familiar e de casal." />
-    <meta property="og:image" content="https://opsico.com.br/img/casais-familia.png" />
+      content="Terapia online para crianças e adolescentes no OPSICO. Um espaço seguro para expressão e regulação emocional com apoio profissional especializado." />
+    <meta property="og:image" content="https://opsico.com.br/img/criancas-adolescentes.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="OPSICO - Terapia Online para Casais e Famílias" />
+    <meta property="og:image:alt" content="OPSICO - Terapia Online para Crianças e Adolescentes" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="OPSICO" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://opsico.com.br/casais-familias.html" />
-    <meta name="twitter:title" content="OPSICO - Terapia Online para Casais e Famílias" />
+    <meta name="twitter:url" content="https://opsico.com.br/criancas-adolescentes.html" />
+    <meta name="twitter:title" content="OPSICO - Terapia Online para Crianças e Adolescentes" />
     <meta
       name="twitter:description"
-      content="Terapia online para casais e famílias no OPSICO. Fortaleça seus laços com sessões seguras e sigilosas, no conforto do seu lar." />
-    <meta name="twitter:image" content="https://opsico.com.br/img/casais-familia.png" />
+      content="Terapia online para crianças e adolescentes no OPSICO. Um espaço seguro para expressão e regulação emocional." />
+    <meta name="twitter:image" content="https://opsico.com.br/img/criancas-adolescentes.png" />
 
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="apple-touch-icon" href="./favicon.ico" />
@@ -51,7 +50,27 @@
       rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="has-sticky-banner">
+    <!-- Sticky Banner -->
+    <div id="sticky-banner" class="sticky-banner" tabindex="-1">
+      <div class="container">
+        <div class="sticky-banner-content">
+          <p class="sticky-banner-text">
+            Conheça o OPSICO Plano Plus: a assistência psicológica que você merece!
+          </p>
+        </div>
+        <div class="sticky-banner-actions">
+          <a href="./plano-plus.html" class="sticky-banner-cta">Clique aqui</a>
+          <button
+            type="button"
+            class="sticky-banner-close"
+            onclick="closeStickyBanner()"
+            aria-label="Fechar banner">
+            <img src="./img/icons/close-line.svg" alt="Fechar" />
+          </button>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <a href="./index.html" class="logo">
@@ -69,9 +88,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle">Serviços <img src="./img/chevron-down.svg" alt="" /></a>
               <ul class="dropdown-menu">
+                <li><a href="./terapia-para-adultos.html">Terapia para Adultos</a></li>
                 <li><a href="./criancas-adolescentes.html">Crianças e Adolescentes</a></li>
                 <li><a href="./casais-familias.html">Casais e Famílias</a></li>
-                <!-- <li><a href="#">Para Adultos</a></li> -->
               </ul>
             </li>
             <li class="dropdown">
@@ -87,6 +106,7 @@
               <a href="#" class="dropdown-toggle">Convênios <img src="./img/chevron-down.svg" alt="" /></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Saúde Mental Acessível para Todos</a></li>
+                <li><a href="./plano-plus.html">Plano Plus</a></li>
               </ul>
             </li>
             <li class="mobile-only"><a href="#" class="btn btn-login">Login</a></li>
@@ -290,7 +310,24 @@
     <script src="./js/scripts.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init()
+      AOS.init({
+        once: true,
+      })
+
+      function closeStickyBanner() {
+        const banner = document.getElementById("sticky-banner")
+        const body = document.body
+
+        if (banner) {
+          banner.style.opacity = "0"
+          banner.style.transform = "translateY(-100%)"
+
+          setTimeout(() => {
+            banner.style.display = "none"
+            body.classList.remove("has-sticky-banner")
+          }, 300)
+        }
+      }
     </script>
   </body>
 </html>

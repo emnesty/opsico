@@ -56,7 +56,27 @@
       rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="has-sticky-banner">
+    <!-- Sticky Banner -->
+    <div id="sticky-banner" class="sticky-banner" tabindex="-1">
+      <div class="container">
+        <div class="sticky-banner-content">
+          <p class="sticky-banner-text">
+            Conheça o OPSICO Plano Plus: a assistência psicológica que você merece!
+          </p>
+        </div>
+        <div class="sticky-banner-actions">
+          <a href="./plano-plus.html" class="sticky-banner-cta">Clique aqui</a>
+          <button
+            type="button"
+            class="sticky-banner-close"
+            onclick="closeStickyBanner()"
+            aria-label="Fechar banner">
+            <img src="./img/icons/close-line.svg" alt="Fechar" />
+          </button>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <a href="./index.html" class="logo">
@@ -74,9 +94,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle">Serviços <img src="./img/chevron-down.svg" alt="" /></a>
               <ul class="dropdown-menu">
+                <li><a href="./terapia-para-adultos.html">Terapia para Adultos</a></li>
                 <li><a href="./criancas-adolescentes.html">Crianças e Adolescentes</a></li>
                 <li><a href="./casais-familias.html">Casais e Famílias</a></li>
-                <!-- <li><a href="#">Para Adultos</a></li> -->
               </ul>
             </li>
             <li class="dropdown">
@@ -92,6 +112,7 @@
               <a href="#" class="dropdown-toggle">Convênios <img src="./img/chevron-down.svg" alt="" /></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Saúde Mental Acessível para Todos</a></li>
+                <li><a href="./plano-plus.html">Plano Plus</a></li>
               </ul>
             </li>
             <li class="mobile-only"><a href="#" class="btn btn-login">Login</a></li>
@@ -193,6 +214,115 @@
         </div>
       </section>
 
+      <!-- Como Funciona o Programa OPSICO -->
+      <section class="como-funciona-programa">
+        <div class="container">
+          <div
+            class="como-funciona-programa__header"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out">
+            <h2>Como Funciona o Programa OPSICO</h2>
+            <p>
+              Nossos programas são totalmente personalizados, pensados para a realidade da sua empresa e as
+              necessidades do seu time.
+            </p>
+          </div>
+
+          <div class="como-funciona-programa__steps">
+            <div
+              class="como-funciona-programa__step"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-easing="ease-in-out">
+              <div class="como-funciona-programa__step-number">1</div>
+              <div class="como-funciona-programa__step-content">
+                <h3>Mapeamento inicial</h3>
+                <p>Identificamos riscos psicossociais e necessidades da empresa.</p>
+              </div>
+            </div>
+
+            <div
+              class="como-funciona-programa__step"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out">
+              <div class="como-funciona-programa__step-number">2</div>
+              <div class="como-funciona-programa__step-content">
+                <h3>Plano de ação personalizado</h3>
+                <p>Alinhado à NR-1 e aos objetivos da organização.</p>
+              </div>
+            </div>
+
+            <div
+              class="como-funciona-programa__step"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-easing="ease-in-out">
+              <div class="como-funciona-programa__step-number">3</div>
+              <div class="como-funciona-programa__step-content">
+                <h3>Atendimento contínuo</h3>
+                <p>Sessões online/presenciais, conversas terapêuticas em grupo e suporte em crises.</p>
+              </div>
+            </div>
+
+            <div
+              class="como-funciona-programa__step"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-easing="ease-in-out">
+              <div class="como-funciona-programa__step-number">4</div>
+              <div class="como-funciona-programa__step-content">
+                <h3>Gestão estratégica</h3>
+                <p>Indicadores em tempo real para RH e lideranças acompanharem evolução e resultados.</p>
+              </div>
+            </div>
+
+            <div
+              class="como-funciona-programa__step"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-easing="ease-in-out">
+              <div class="como-funciona-programa__step-number">5</div>
+              <div class="como-funciona-programa__step-content">
+                <h3>Acompanhamento próximo</h3>
+                <p>Visitas presenciais do Business Partner e ações mensais de bem-estar.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="como-funciona-programa__clients">
+            <h2 data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
+              Nossos Clientes Parceiros
+            </h2>
+
+            <div
+              class="como-funciona-programa__clients-grid"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out">
+              <div class="como-funciona-programa__client-logo">
+                <img src="./img/icons/empresas/abrhsp.png" alt="ABRHSP" />
+              </div>
+              <div class="como-funciona-programa__client-logo">
+                <img src="./img/icons/empresas/Chem-Trend_logo.svg" alt="Chem-Trend" />
+              </div>
+              <div class="como-funciona-programa__client-logo">
+                <img
+                  src="./img/icons/empresas/Conselho_Federal_de_Psicologia.png"
+                  alt="Conselho Federal de Psicologia" />
+              </div>
+              <div class="como-funciona-programa__client-logo">
+                <img src="./img/icons/empresas/creditas-vector-logo.svg" alt="Creditas" />
+              </div>
+              <div class="como-funciona-programa__client-logo">
+                <img src="./img/icons/empresas/SurTec_Logo.svg" alt="SurTec" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="resultados-opsico">
         <div class="container">
           <div
@@ -249,7 +379,7 @@
               data-aos-easing="ease-in-out">
               <img src="./img/icons/beneficios-terapia-settings-01.svg" alt="" class="especialista-icon" />
               <h3>Business Partner</h3>
-              <p>suporte estratégico para RH e lideranças.</p>
+              <p>Suporte estratégico para RH e lideranças.</p>
             </article>
 
             <article
@@ -259,7 +389,7 @@
               data-aos-easing="ease-in-out">
               <img src="./img/icons/beneficios-terapia-users-03.svg" alt="" class="especialista-icon" />
               <h3>Psicólogos</h3>
-              <p>atendimento clínico individualizado e em grupo.</p>
+              <p>Atendimento clínico individualizado e em grupo.</p>
             </article>
 
             <article
@@ -269,7 +399,7 @@
               data-aos-easing="ease-in-out">
               <img src="./img/icons/beneficios-terapia-lightbulb-02.svg" alt="" class="especialista-icon" />
               <h3>Especialistas em Saúde Mental</h3>
-              <p>apoio em situações complexas e de alta demanda.</p>
+              <p>Apoio em situações complexas e de alta demanda.</p>
             </article>
 
             <article
@@ -279,7 +409,7 @@
               data-aos-easing="ease-in-out">
               <img src="./img/icons/beneficios-terapia-heart-hand.svg" alt="" class="especialista-icon" />
               <h3>Suporte em Crises</h3>
-              <p>atendimento imediato e orientação em situações críticas.</p>
+              <p>Atendimento imediato e orientação em situações críticas.</p>
             </article>
           </div>
 
@@ -289,6 +419,336 @@
             data-aos-delay="100"
             data-aos-easing="ease-in-out">
             <a href="#contato" class="btn btn-primary">Solicite uma demonstração</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- O que sua empresa encontra na OPSICO -->
+      <section class="programas-opsico">
+        <div class="container">
+          <div
+            class="programas-opsico__header"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out">
+            <h2>O que sua empresa encontra na OPSICO</h2>
+            <p>
+              Nossos programas unem prevenção, acompanhamento e indicadores em tempo real para fortalecer
+              cultura, reduzir riscos e impulsionar resultados.
+            </p>
+            <p class="subtitle">
+              Atendimento integral e individualizado: sessões online e presenciais, acessíveis a qualquer hora
+              e em qualquer lugar.
+            </p>
+          </div>
+
+          <div
+            class="programas-opsico__grid"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease-in-out">
+            <article class="programas-opsico__card programas-opsico__card--atendimento">
+              <h3>Atendimento Integral e Individualizado</h3>
+              <p>Sessões online e presenciais, acessíveis a qualquer hora e em qualquer lugar.</p>
+            </article>
+
+            <article class="programas-opsico__card programas-opsico__card--programas">
+              <h3>Programas Autoguiados</h3>
+              <p>Baseados em pesquisas, para fortalecer inteligência emocional e prevenir adoecimento.</p>
+            </article>
+
+            <article class="programas-opsico__card programas-opsico__card--terapia">
+              <h3>Terapia Personalizada</h3>
+              <p>Suporte rápido com psicólogos experientes.</p>
+            </article>
+
+            <article class="programas-opsico__card programas-opsico__card--grupo">
+              <h3>Suporte em Grupo</h3>
+              <p>Conversas terapêuticas que estimulam trocas, acolhimento e fortalecimento coletivo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Produtividade e Bem-estar -->
+      <section class="produtividade-bem-estar">
+        <div class="container">
+          <div
+            class="produtividade-bem-estar__header"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out">
+            <h2>Melhore o bem-estar mental, melhore a produtividade</h2>
+          </div>
+
+          <div class="produtividade-bem-estar__wrapper">
+            <article
+              class="produtividade-bem-estar__card produtividade-bem-estar__card--stat"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out">
+              <span class="produtividade-bem-estar__eyebrow">Dado comprovado</span>
+              <span class="stat-number">60%</span>
+              <p class="produtividade-bem-estar__description">
+                Das empresas que investem em programas corporativos relatam ganhos diretos de produtividade e
+                performance das equipes.
+              </p>
+              <span class="produtividade-bem-estar__source">Deloitte, 2023 – Exame</span>
+            </article>
+
+            <article
+              class="produtividade-bem-estar__card produtividade-bem-estar__card--benefits"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-easing="ease-in-out">
+              <h3 class="produtividade-bem-estar__subtitle">Impactos diretos no seu time</h3>
+              <ul class="produtividade-bem-estar__list">
+                <li class="produtividade-bem-estar__list-item">
+                  <span class="icon"></span>
+                  <div class="content">
+                    <h4>Redução de absenteísmo e rotatividade</h4>
+                    <p>Monitoramento contínuo e ações preventivas diminuem afastamentos e custos.</p>
+                  </div>
+                </li>
+                <li class="produtividade-bem-estar__list-item">
+                  <span class="icon"></span>
+                  <div class="content">
+                    <h4>Aumento no engajamento e satisfação</h4>
+                    <p>Colaboradores se sentem acolhidos, motivados e entregam resultados sustentáveis.</p>
+                  </div>
+                </li>
+                <li class="produtividade-bem-estar__list-item">
+                  <span class="icon"></span>
+                  <div class="content">
+                    <h4>Cultura de alto desempenho saudável</h4>
+                    <p>Programas estruturados fortalecem líderes e constroem ambientes seguros.</p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefícios Clínicos -->
+      <section class="beneficios-clinicos">
+        <div class="container">
+          <div
+            class="beneficios-clinicos__header"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out">
+            <h2>Benefícios clínicos e para o negócio</h2>
+          </div>
+
+          <div class="beneficios-clinicos__content">
+            <div
+              class="beneficios-clinicos__text"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out">
+              <h3>Resultados comprovados para sua organização</h3>
+              <ul class="beneficios-clinicos__list">
+                <li>Colaboradores mais engajados e comprometidos</li>
+                <li>Redução de custos com afastamentos e turnover</li>
+                <li>Melhor retenção de talentos</li>
+                <li>Ambiente mais seguro, saudável e produtivo</li>
+              </ul>
+            </div>
+
+            <div
+              class="beneficios-clinicos__visual"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-easing="ease-in-out">
+              <article class="beneficios-clinicos__metric">
+                <figure class="beneficios-clinicos__icon">
+                  <img
+                    src="./img/icons/public-relation.png"
+                    alt="Ícone representando engajamento corporativo"
+                    loading="lazy" />
+                </figure>
+                <div class="beneficios-clinicos__metric-info">
+                  <h4>Engajamento</h4>
+                  <p>Equipes conectadas e motivadas a entregar resultados consistentes.</p>
+                </div>
+              </article>
+              <article class="beneficios-clinicos__metric">
+                <figure class="beneficios-clinicos__icon">
+                  <img
+                    src="./img/icons/inflation.png"
+                    alt="Ícone representando redução de custos"
+                    loading="lazy" />
+                </figure>
+                <div class="beneficios-clinicos__metric-info">
+                  <h4>Redução de Custos</h4>
+                  <p>Menos afastamentos e mais previsibilidade nos investimentos em saúde.</p>
+                </div>
+              </article>
+              <article class="beneficios-clinicos__metric">
+                <figure class="beneficios-clinicos__icon">
+                  <img
+                    src="./img/icons/lead-generation.png"
+                    alt="Ícone representando retenção de talentos"
+                    loading="lazy" />
+                </figure>
+                <div class="beneficios-clinicos__metric-info">
+                  <h4>Retenção</h4>
+                  <p>Profissionais valorizados permanecem e fortalecem o conhecimento interno.</p>
+                </div>
+              </article>
+              <article class="beneficios-clinicos__metric">
+                <figure class="beneficios-clinicos__icon">
+                  <img
+                    src="./img/icons/save-the-world.png"
+                    alt="Ícone representando ambiente saudável"
+                    loading="lazy" />
+                </figure>
+                <div class="beneficios-clinicos__metric-info">
+                  <h4>Ambiente Saudável</h4>
+                  <p>Uma cultura de cuidado que sustenta alto desempenho e bem-estar.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Condições Tratadas -->
+      <section class="condicoes-tratadas">
+        <div class="container">
+          <div
+            class="condicoes-tratadas__intro"
+            data-aos="fade-up"
+            data-aos-delay="80"
+            data-aos-easing="ease-in-out">
+            <h2>Mais de 150 condições acompanhadas com excelência</h2>
+            <p>
+              Programas completos para acolher colaboradores em diferentes momentos, prevenindo riscos
+              psicossociais e fortalecendo a cultura de cuidado da sua empresa.
+            </p>
+          </div>
+
+          <div class="condicoes-tratadas__layout">
+            <div
+              class="condicoes-tratadas__content"
+              data-aos="fade-up"
+              data-aos-delay="120"
+              data-aos-easing="ease-in-out">
+              <dl class="condicoes-tratadas__list">
+                <div class="condicoes-tratadas__item">
+                  <dt>Transtornos Mentais</dt>
+                  <dd>Depressão, ansiedade e estresse.</dd>
+                </div>
+                <div class="condicoes-tratadas__item">
+                  <dt>Burnout e Insônia</dt>
+                  <dd>Ocorrências de burnout, insônia e conflitos familiares.</dd>
+                </div>
+                <div class="condicoes-tratadas__item">
+                  <dt>Transtornos Específicos</dt>
+                  <dd>TOC, fobias, alimentação e outras condições específicas.</dd>
+                </div>
+                <div class="condicoes-tratadas__item">
+                  <dt>Trauma e Luto</dt>
+                  <dd>Acolhimento em processos de trauma, luto e dependências.</dd>
+                </div>
+                <div class="condicoes-tratadas__item">
+                  <dt>Crises e Solidão</dt>
+                  <dd>Suporte imediato em ideação suicida, solidão e transtornos de humor.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <figure
+              class="condicoes-tratadas__visual"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+                alt="Equipe de trabalho colaborando em um ambiente acolhedor"
+                loading="lazy"
+                width="1200"
+                height="800" />
+            </figure>
+          </div>
+
+          <div
+            class="condicoes-tratadas__cta"
+            data-aos="fade-up"
+            data-aos-delay="140"
+            data-aos-easing="ease-in-out">
+            <h3>Quer ajudar sua empresa a prevenir riscos psicossociais?</h3>
+            <p>Solicite uma demonstração do programa OPSICO configurado para sua realidade.</p>
+            <a href="#contato" class="btn btn-primary">Solicite uma demonstração</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tecnologia OPSICO -->
+      <section class="tecnologia-opsico">
+        <div class="container">
+          <div
+            class="tecnologia-opsico__header"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out">
+            <h2>Tecnologia OPSICO para Diagnóstico e Tratamento Inteligente</h2>
+            <p class="subtitle">
+              Saúde Mental nas Indústrias: impacto na produtividade e retenção de talentos
+            </p>
+          </div>
+
+          <div
+            class="tecnologia-opsico__features"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-easing="ease-in-out">
+            <div class="tecnologia-opsico__feature tecnologia-opsico__feature--insights">
+              <div class="icon icon--insights">
+                <img src="./img/icons/bar-chart-2-line.svg" alt="Ícone de gráfico de barras" loading="lazy" />
+              </div>
+              <h3>Insights de Dados</h3>
+              <p>Indicadores em tempo real e informações segmentadas para tomada de decisões estratégicas.</p>
+            </div>
+
+            <div class="tecnologia-opsico__feature tecnologia-opsico__feature--gestao">
+              <div class="icon icon--gestao">
+                <img src="./img/icons/line-chart-line.svg" alt="Ícone de gráfico de linha" loading="lazy" />
+              </div>
+              <h3>Gestão Estratégica</h3>
+              <p>Evolução do time acompanhada por dashboards claros e objetivos.</p>
+            </div>
+
+            <div class="tecnologia-opsico__feature tecnologia-opsico__feature--rh">
+              <div class="icon icon--rh">
+                <img src="./img/icons/building-4-line.svg" alt="Ícone de prédio corporativo" loading="lazy" />
+              </div>
+              <h3>Apoio ao RH</h3>
+              <p>Relatórios que orientam decisões de saúde corporativa com segurança e inteligência.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Solicite uma Demonstração -->
+      <section class="cta-demonstracao" id="cta-demonstracao">
+        <div class="container">
+          <div
+            class="cta-demonstracao__content"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true">
+            <h2 class="cta-demonstracao__title">Leve a OPSICO para a sua empresa</h2>
+            <p class="cta-demonstracao__subtitle">
+              Conheça nossa plataforma de gestão de saúde mental em uma demonstração guiada
+            </p>
+            <p class="cta-demonstracao__description">
+              Em apenas 20 minutos mostramos como sua empresa pode estar em conformidade com a NR-1,
+              fortalecer sua cultura organizacional e cuidar da saúde mental do seu time.
+            </p>
+            <a href="#contato" class="btn btn-primary" role="button">Solicite uma demonstração</a>
           </div>
         </div>
       </section>
@@ -325,7 +785,24 @@
     <script src="./js/scripts.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init()
+      AOS.init({
+        once: true,
+      })
+
+      function closeStickyBanner() {
+        const banner = document.getElementById("sticky-banner")
+        const body = document.body
+
+        if (banner) {
+          banner.style.opacity = "0"
+          banner.style.transform = "translateY(-100%)"
+
+          setTimeout(() => {
+            banner.style.display = "none"
+            body.classList.remove("has-sticky-banner")
+          }, 300)
+        }
+      }
     </script>
   </body>
 </html>

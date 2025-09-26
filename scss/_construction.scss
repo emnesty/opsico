@@ -1,0 +1,69 @@
+// Estilos para a página "Em construção"
+.construction-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  font-family: "Montserrat", sans-serif;
+}
+
+.construction-logo {
+  margin-bottom: 2rem;
+
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+.construction-message {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #006765;
+  margin-bottom: 1rem;
+}
+
+.construction-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+
+  a {
+    color: #006765;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 2px solid #006765;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #006765;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .construction-message {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

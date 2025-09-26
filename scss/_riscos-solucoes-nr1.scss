@@ -5,7 +5,6 @@
   position: relative;
 
   .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
   }
@@ -63,15 +62,11 @@
     flex: auto;
 
     h2 {
-      font-size: clamp(2.8rem, 4vw, 4rem);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
       font-weight: 600;
       line-height: 1.1;
       color: var(--text-color);
       margin-bottom: clamp(24px, 4vw, 32px);
-
-      @media (min-width: 640px) {
-        font-size: clamp(3.2rem, 4.5vw, 5rem);
-      }
     }
 
     .section-description {

@@ -52,7 +52,27 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap"
       rel="stylesheet" />
   </head>
-  <body>
+  <body class="has-sticky-banner">
+    <!-- Sticky Banner -->
+    <div id="sticky-banner" class="sticky-banner" tabindex="-1">
+      <div class="container">
+        <div class="sticky-banner-content">
+          <p class="sticky-banner-text">
+            Conheça o OPSICO Plano Plus: a assistência psicológica que você merece!
+          </p>
+        </div>
+        <div class="sticky-banner-actions">
+          <a href="./plano-plus.html" class="sticky-banner-cta">Clique aqui</a>
+          <button
+            type="button"
+            class="sticky-banner-close"
+            onclick="closeStickyBanner()"
+            aria-label="Fechar banner">
+            <img src="./img/icons/close-line.svg" alt="Fechar" />
+          </button>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <a href="./index.html" class="logo">
@@ -70,9 +90,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle"> Serviços <img src="./img/chevron-down.svg" alt="" /> </a>
               <ul class="dropdown-menu">
+                <li><a href="./terapia-para-adultos.html">Terapia para Adultos</a></li>
                 <li><a href="./criancas-adolescentes.html">Crianças e Adolescentes</a></li>
                 <li><a href="./casais-familias.html">Casais e Famílias</a></li>
-                <!-- <li><a href="#">Para Adultos</a></li> -->
               </ul>
             </li>
             <li class="dropdown">
@@ -88,6 +108,7 @@
               <a href="#" class="dropdown-toggle"> Convênios <img src="./img/chevron-down.svg" alt="" /> </a>
               <ul class="dropdown-menu">
                 <li><a href="#">Saúde Mental Acessível para Todos</a></li>
+                <li><a href="./plano-plus.html">Plano Plus</a></li>
               </ul>
             </li>
             <li class="mobile-only">
@@ -529,6 +550,23 @@
   <script src="./js/scripts.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init()
+    AOS.init({
+      once: true,
+    })
+
+    function closeStickyBanner() {
+      const banner = document.getElementById("sticky-banner")
+      const body = document.body
+
+      if (banner) {
+        banner.style.opacity = "0"
+        banner.style.transform = "translateY(-100%)"
+
+        setTimeout(() => {
+          banner.style.display = "none"
+          body.classList.remove("has-sticky-banner")
+        }, 300)
+      }
+    }
   </script>
 </html>

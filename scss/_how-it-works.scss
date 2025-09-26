@@ -50,7 +50,7 @@
     margin-bottom: 64px;
 
     h2 {
-      font-size: 4rem;
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
       font-weight: 600;
       color: var(--text-color);
       margin-bottom: var(--spacing-md);

@@ -1,0 +1,165 @@
+// Sticky Banner Styles
+.sticky-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background: linear-gradient(135deg, #006765 0%, #00a19b 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 12px;
+  }
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &-cta {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: white;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+  }
+
+  &-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+
+    &:hover {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+// Adjust header positioning when banner is visible
+body.has-sticky-banner .header {
+  margin-top: 52px;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .sticky-banner {
+    padding: 10px 0;
+
+    .container {
+      padding: 0 12px;
+      gap: 12px;
+    }
+
+    &-text {
+      font-size: 13px;
+    }
+
+    &-cta {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+
+    &-actions {
+      gap: 8px;
+    }
+  }
+
+  body.has-sticky-banner .header {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-banner {
+    .container {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+
+    &-content {
+      justify-content: center;
+    }
+
+    &-actions {
+      justify-content: center;
+    }
+  }
+
+  body.has-sticky-banner .header {
+    margin-top: 68px;
+  }
+}

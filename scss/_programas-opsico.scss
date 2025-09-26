@@ -1,0 +1,93 @@
+/* Seção Programas OPSICO */
+.programas-opsico {
+  padding: 8rem 0;
+  background: #f8f9fa;
+
+  .container {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: #5a6c7d;
+      line-height: 1.6;
+      max-width: 80rem;
+      margin: 0 auto 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.6rem;
+      color: #7a8997;
+      font-weight: 500;
+      margin: 0 auto;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__card {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 0.8rem;
+    border: 1px solid #e9ecef;
+
+    @media (max-width: 768px) {
+      padding: 2.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #5a6c7d;
+      line-height: 1.6;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

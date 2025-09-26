@@ -42,16 +42,12 @@
   margin-bottom: 2.5rem;
 
   h2 {
-    font-size: 1.75rem;
-    color: var(--primary);
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    color: var(--text-color);
     margin-bottom: 1rem;
     font-weight: 600;
     border-bottom: 2px solid var(--secondary);
     padding-bottom: 0.5rem;
-
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-    }
   }
 
   h3 {

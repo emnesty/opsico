@@ -3,40 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OPSICO - Terapia Online para Adultos | Equilíbrio Emocional e Autoconhecimento</title>
+    <title>OPSICO - Cuidado em Saúde Mental</title>
     <meta
       name="description"
-      content="Terapia online para adultos no OPSICO. Sessões individuais com psicólogos especializados. Cuidar da sua saúde mental nunca foi tão simples e seguro. Agende sua sessão hoje." />
-    <meta
-      name="keywords"
-      content="terapia online, psicologia, saúde mental, adultos, sessões individuais, psicólogo, autoconhecimento, ansiedade, bem-estar" />
+      content="OPSICO - Sua jornada de autoconhecimento e bem-estar mental começa aqui." />
     <meta name="author" content="OPSICO" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://opsico.com.br/" />
-    <meta
-      property="og:title"
-      content="OPSICO - Terapia Online para Adultos | Equilíbrio Emocional e Autoconhecimento" />
-    <meta
-      property="og:description"
-      content="Terapia online para adultos no OPSICO. Sessões individuais com psicólogos especializados. Cuidar da sua saúde mental nunca foi tão simples e seguro." />
-    <meta property="og:image" content="https://opsico.com.br/img/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="OPSICO - Terapia Online para Adultos" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="OPSICO" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://opsico.com.br/" />
-    <meta name="twitter:title" content="OPSICO - Terapia Online para Adultos" />
-    <meta
-      name="twitter:description"
-      content="Terapia online para adultos no OPSICO. Sessões individuais com psicólogos especializados. Cuidar da sua saúde mental nunca foi tão simples e seguro." />
-    <meta name="twitter:image" content="https://opsico.com.br/img/og-image.jpg" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
@@ -54,7 +25,27 @@
       rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="has-sticky-banner">
+    <!-- Sticky Banner -->
+    <div id="sticky-banner" class="sticky-banner" tabindex="-1">
+      <div class="container">
+        <div class="sticky-banner-content">
+          <p class="sticky-banner-text">
+            Conheça o OPSICO Plano Plus: a assistência psicológica que você merece!
+          </p>
+        </div>
+        <div class="sticky-banner-actions">
+          <a href="./plano-plus.html" class="sticky-banner-cta">Clique aqui</a>
+          <button
+            type="button"
+            class="sticky-banner-close"
+            onclick="closeStickyBanner()"
+            aria-label="Fechar banner">
+            <img src="./img/icons/close-line.svg" alt="Fechar" />
+          </button>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <a href="./index.html" class="logo">
@@ -72,9 +63,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle"> Serviços <img src="./img/chevron-down.svg" alt="" /> </a>
               <ul class="dropdown-menu">
+                <li><a href="./terapia-para-adultos.html">Terapia para Adultos</a></li>
                 <li><a href="./criancas-adolescentes.html">Crianças e Adolescentes</a></li>
                 <li><a href="./casais-familias.html">Casais e Famílias</a></li>
-                <!-- <li><a href="#">Para Adultos</a></li> -->
               </ul>
             </li>
             <li class="dropdown">
@@ -90,6 +81,7 @@
               <a href="#" class="dropdown-toggle"> Convênios <img src="./img/chevron-down.svg" alt="" /> </a>
               <ul class="dropdown-menu">
                 <li><a href="#">Saúde Mental Acessível para Todos</a></li>
+                <li><a href="./plano-plus.html">Plano Plus</a></li>
               </ul>
             </li>
             <li class="mobile-only">
@@ -108,275 +100,34 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="split-hero">
       <div class="container">
-        <div class="hero-text" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-          <h1>
-            Terapia para Adultos – <br />
-            Equilíbrio emocional, foco <br />
-            e <strong>autoconhecimento</strong>
-          </h1>
-          <p>
-            Se chegou até aqui, é porque decidiu priorizar sua saúde mental — o primeiro passo para mudanças
-            reais.
-          </p>
-          <a href="#" class="btn btn-primary">Agendar sessão Online</a>
-          <span>Cuidar de si nunca foi tão simples e seguro.</span>
-        </div>
-        <div
-          class="hero-image"
-          class="hero-text"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-out">
-          <div class="image-container">
-            <img src="./img/image-hero.png" alt="Psicóloga sorrindo" />
-            <div class="professional-name-tag">
-              <span class="name">FERNANDA SEPPI</span>
-              <span class="credentials">CRP 06/111697</span>
+        <div class="split-hero__inner">
+          <div class="split-hero__copy">
+            <div class="copy-inner">
+              <h1 class="big-title">
+                Cuidado psicológico<br />
+                de excelência, onde<br />
+                e quando você precisar
+              </h1>
+              <p class="sublead">
+                Terapia individual e corporativa com especialistas selecionados.
+                <strong>Uma experiência única em saúde mental</strong> — pra quem exige mais.
+              </p>
+              <div class="cta-row">
+                <a href="#" class="btn btn-primary">Começar</a>
+                <a href="#" class="btn btn-secondary">Verificar convênio</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="how-it-works">
-      <div class="container">
-        <div
-          class="individual-therapy-card"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-out">
-          <h3>Terapia individual</h3>
-          <p>
-            No OPSICO, a terapia para adultos é um espaço
-            <strong>seguro, sigiloso e totalmente personalizado para você</strong>. Cada sessão é planejada
-            para cuidar do seu crescimento emocional, equilíbrio e bem-estar mental, ajudando você a lidar com
-            desafios do dia a dia, melhorar relacionamentos e tomar decisões com mais clareza.
-          </p>
-        </div>
-
-        <div
-          class="how-it-works-header"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-out">
-          <h2>Como funciona a terapia para adultos</h2>
-          <p>
-            Um espaço acolhedor e seguro, onde você descobre soluções práticas para seus desafios emocionais,
-            fortalecendo sua confiança e equilíbrio pessoal.
-          </p>
-        </div>
-        <div
-          class="how-it-works-content"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-out">
-          <div class="image-wrapper">
-            <img src="./img/how-it-works-image-person.png" alt="Mulher sorrindo na terapia online" />
+          <div class="split-hero__media">
+            <img src="./img/IMG-20250529-WA0044.png" alt="Profissional OPSICO" />
             <div class="professional-name-tag">
               <span class="name">JULIANA GREGIO</span>
-              <span class="credentials">CRP 06/167848</span>
+              <span class="credentials">CRP: 06/167848</span>
             </div>
           </div>
-          <div class="features-grid">
-            <div class="feature-item">
-              <img src="./img/icons/icon-how-it-works-1.svg" alt="Ícone de relógio" />
-              <h4>Agendamento simples e flexível:</h4>
-              <p>Escolha o horário que melhor se encaixa na sua rotina, com atendimento totalmente online</p>
-            </div>
-            <div class="feature-item">
-              <img src="./img/icons/icon-how-it-works-2.svg" alt="Ícone de rosto sorrindo" />
-              <h4>Sessões individuais e acolhedoras:</h4>
-              <p>
-                Encontros conduzidos por psicólogos especializados, oferecendo escuta qualificada e orientação
-                prática.
-              </p>
-            </div>
-            <div class="feature-item">
-              <img src="./img/icons/icon-how-it-works-3.svg" alt="Ícone de gráfico subindo" />
-              <h4>Acompanhamento contínuo</h4>
-              <p>
-                Construímos juntos uma jornada de desenvolvimento pessoal, adaptada ao seu ritmo e
-                necessidades
-              </p>
-            </div>
-            <div class="feature-item">
-              <img src="./img/icons/icon-how-it-works-4.svg" alt="Ícone de notebook" />
-              <h4>Vantagem do formato online</h4>
-              <p>Participe de qualquer lugar, mantendo conforto, segurança e regularidade.</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="how-it-works-actions"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-out">
-          <a href="#" class="btn btn-primary">Agendar sessão Online</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="diferenciais-opsico">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-          Diferenciais da OPSICO
-        </h2>
-        <p class="section-description" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-          Combinamos inovação tecnológica e cuidado humano, oferecendo acompanhamento emocional de qualidade,
-          sigiloso, acessível e totalmente focado no seu bem-estar
-        </p>
-
-        <div class="main-image-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-          <div class="carousel" aria-label="Galeria de profissionais">
-            <div class="carousel-track">
-              <div class="slide-wrapper">
-                <img class="slide" src="./img/slide1.png" alt="Profissional 1" />
-                <div class="professional-name-tag">
-                  <span class="name">EDSON FERNANDES</span>
-                  <span class="credentials">CRP 06/167059</span>
-                </div>
-              </div>
-              <div class="slide-wrapper">
-                <img class="slide" src="./img/INES_AMERICANO.jpeg" alt="Profissional 2" />
-                <div class="professional-name-tag">
-                  <span class="name">INÊS AMERICANO</span>
-                  <span class="credentials">CRP 06/175645</span>
-                </div>
-              </div>
-              <div class="slide-wrapper">
-                <img class="slide" src="./img/PEdro_Sammarco.jpeg" alt="Profissional 3" />
-                <div class="professional-name-tag">
-                  <span class="name">PEDRO SAMMARCO</span>
-                  <span class="credentials">CRP 06/66066</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="features-grid" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-          <div class="feature-item active">
-            <h3 class="feature-title">Profissionais qualificados</h3>
-            <p class="feature-description">
-              Escolha o horário que melhor se encaixa na sua rotina, com atendimento totalmente online.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h3 class="feature-title">Sigilo total</h3>
-            <p class="feature-description">
-              Todas as sessões seguem o
-              <a href="#" class="link-destaque">Código de Ética do CRP</a>.
-              <a href="#" class="link-destaque">Leia aqui</a>
-            </p>
-          </div>
-          <div class="feature-item">
-            <h3 class="feature-title">100% Online</h3>
-            <p class="feature-description">
-              Faça suas sessões com conforto, privacidade e flexibilidade, de qualquer lugar.
-            </p>
-          </div>
-        </div>
-
-        <div class="button-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-          <a href="#" class="btn btn-primary">Agendar sessão Online</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="beneficios-terapia">
-      <div class="container">
-        <header class="bt-header">
-          <h2 data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-            Benefícios da terapia para adultos
-          </h2>
-          <p data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-            Ao investir em sua saúde emocional, você descobre formas de reduzir ansiedade, aumentar
-            autoconhecimento e fortalecer relações pessoais e profissionais. A terapia é um caminho para viver
-            com mais equilíbrio e propósito.
-          </p>
-        </header>
-
-        <div class="bt-grid" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-          <article class="bt-card bt-a" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-            <img src="./img/icons/beneficios-terapia-face-content.svg" alt="" class="bt-icon" />
-            <h3>Alívio da Ansiedade</h3>
-            <p>
-              Redução da ansiedade e do estresse – técnicas de regulação emocional comprovadas
-              cientificamente. Comece a sentir alívio já nas primeiras sessões.
-            </p>
-          </article>
-
-          <article class="bt-card bt-b" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-            <img src="./img/icons/beneficios-terapia-settings-01.svg" alt="" class="bt-icon" />
-            <h3>Foco e Produtividade</h3>
-            <p>
-              Maior foco e produtividade – reorganize seus padrões mentais e concentre energia no que
-              realmente importa.
-            </p>
-          </article>
-
-          <article class="bt-card bt-c" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-            <img src="./img/icons/beneficios-terapia-users-03.svg" alt="" class="bt-icon" />
-            <h3>Relacionamentos Saudáveis</h3>
-            <p>
-              Relacionamentos mais saudáveis – desenvolva comunicação e empatia para melhorar suas conexões.
-            </p>
-          </article>
-
-          <article class="bt-card bt-d" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-            <img src="./img/icons/beneficios-terapia-lightbulb-02.svg" alt="" class="bt-icon" />
-            <h3>Autoconhecimento Profundo</h3>
-            <p>Autoconhecimento profundo – compreenda suas emoções e alinhe sua vida aos seus valores.</p>
-          </article>
-
-          <!-- card grande inferior -->
-          <article class="bt-card bt-e" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-            <img src="./img/icons/beneficios-terapia-heart-hand.svg" alt="" class="bt-icon" />
-            <h3>Resiliência Emocional</h3>
-            <p>Mais resiliência – enfrente desafios com equilíbrio e segurança.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="depoimento-cliente">
-      <div class="container">
-        <div
-          class="depoimento-conteudo"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-out">
-          <div class="estrelas" aria-label="Avaliação 5 de 5">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          </div>
-
-          <blockquote class="texto">
-            Muitos dos nossos clientes relatam sentir mais clareza, confiança e leveza na vida já nas
-            primeiras semanas de terapia.
-          </blockquote>
-
-          <div class="autor">
-            <strong class="nome">— L. Silva</strong>
-            <span class="cargo">Empresário</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-jornada" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Comece sua jornada emocional hoje</h2>
-          <p>
-            Cuidar de si nunca foi tão simples e seguro. Agende sua primeira sessão online com o OPSICO e
-            experimente o acolhimento, profissionalismo e suporte que você merece.
-          </p>
-        </div>
-
-        <div class="cta-action">
-          <a href="#" class="btn btn-primary">Agendar sessão Online</a>
         </div>
       </div>
     </section>
@@ -387,7 +138,7 @@
           <a href="./index.html" class="logo">
             <img src="./img/Horizontal Branco (1).svg" alt="OPSICO" />
           </a>
-          <p class="tagline">Terapia para Adultos – Equilíbrio emocional, foco e autoconhecimento</p>
+          <p class="tagline">Cuidado em saúde mental com profissionais qualificados</p>
         </div>
 
         <nav class="footer-nav" aria-label="Rodapé">
@@ -406,41 +157,8 @@
 
       <div class="container footer-bottom">
         <p class="copyright">© 2025 OPSICO. Todos os direitos reservados</p>
-        <!-- <ul class="social">
-          <li>
-            <a href="#" aria-label="X"
-              ><img src="./img/social/x.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#" aria-label="LinkedIn"
-              ><img src="./img/social/linkedin.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#" aria-label="Facebook"
-              ><img src="./img/social/facebook.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#" aria-label="GitHub"
-              ><img src="./img/social/github.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#" aria-label="Dribbble"
-              ><img src="./img/social/dribbble.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#" aria-label="Produto"
-              ><img src="./img/social/cube.svg" alt=""
-            /></a>
-          </li>
-        </ul> -->
       </div>
     </footer>
-
     <!-- Cookie Consent -->
     <section id="cookie-consent" class="cookie-consent hidden">
       <h2>🍪 Aviso de Cookies</h2>
@@ -454,9 +172,45 @@
       </div>
     </section>
   </body>
+
+  <!-- Sticky Banner JavaScript -->
+  <script>
+    function closeStickyBanner() {
+      const banner = document.getElementById("sticky-banner")
+      const body = document.body
+
+      if (banner) {
+        // Add fade out animation
+        banner.style.transition = "opacity 0.3s ease, transform 0.3s ease"
+        banner.style.opacity = "0"
+        banner.style.transform = "translateY(-100%)"
+
+        // Remove banner from DOM and adjust body class
+        setTimeout(() => {
+          banner.remove()
+          body.classList.remove("has-sticky-banner")
+        }, 300)
+      }
+    }
+
+    // Close banner with Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeStickyBanner()
+      }
+    })
+
+    // Optional: Auto-close banner after some time (uncomment if needed)
+    // setTimeout(() => {
+    //   closeStickyBanner();
+    // }, 10000); // Auto-close after 10 seconds
+  </script>
+
   <script src="./js/scripts.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init()
+    AOS.init({
+      once: true,
+    })
   </script>
 </html>

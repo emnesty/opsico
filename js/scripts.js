@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header")
   const body = document.body
 
+  // Garantir que todas as animações AOS executem apenas uma vez, salvo configuração específica
+  document.querySelectorAll("[data-aos]").forEach((element) => {
+    if (!element.hasAttribute("data-aos-once")) {
+      element.setAttribute("data-aos-once", "true")
+    }
+  })
+
   // Resetar todos os estados dos dropdowns e menus no carregamento
   function resetMenuStates() {
     // Resetar menu mobile
@@ -359,6 +366,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 })
 
+// FAQ accordion behaviour
+document.addEventListener("DOMContentLoaded", function () {
+  const faqTriggers = document.querySelectorAll(".faq-item__trigger")
+
+  if (faqTriggers.length === 0) return
+
+  faqTriggers.forEach((trigger) => {
+    const targetId = trigger.getAttribute("aria-controls")
+    const target = document.getElementById(targetId)
+
+    const toggleFAQ = () => {
+      const isExpanded = trigger.getAttribute("aria-expanded") === "true"
+      trigger.setAttribute("aria-expanded", (!isExpanded).toString())
+
+      if (target) {
+        target.hidden = isExpanded
+      }
+    }
+
+    trigger.addEventListener("click", toggleFAQ)
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault()
+        toggleFAQ()
+      }
+    })
+  })
+})
+
 // Cookie Consent Management
 document.addEventListener("DOMContentLoaded", function () {
   const COOKIE_CONSENT_KEY = "opsico_cookie_consent"
@@ -449,3 +485,36 @@ function resetCookieConsent() {
   localStorage.removeItem("opsico_cookie_consent")
   location.reload()
 }
+
+// Sticky Banner Functions
+function closeStickyBanner() {
+  const banner = document.getElementById("sticky-banner")
+  const body = document.body
+
+  if (banner) {
+    // Add fade out animation
+    banner.style.opacity = "0"
+    banner.style.transform = "translateY(-100%)"
+
+    // Remove banner and body class after animation
+    setTimeout(() => {
+      banner.style.display = "none"
+      body.classList.remove("has-sticky-banner")
+    }, 300)
+  }
+
+  // Store banner close state in localStorage
+  localStorage.setItem("opsico_sticky_banner_closed", "true")
+}
+
+// Check if sticky banner should be shown on page load
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("sticky-banner")
+  const body = document.body
+  const bannerClosed = localStorage.getItem("opsico_sticky_banner_closed")
+
+  if (banner && bannerClosed === "true") {
+    banner.style.display = "none"
+    body.classList.remove("has-sticky-banner")
+  }
+})

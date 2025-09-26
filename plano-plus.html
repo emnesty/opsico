@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OPSICO - Plano Plus | Alta Performance Emocional</title>
+    <meta
+      name="description"
+      content="Plano Plus OPSICO - Alta performance emocional exige um cuidado à altura." />
+    <meta name="author" content="OPSICO" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./favicon.ico" />
+    <meta name="msapplication-TileColor" content="#006765" />
+    <meta name="theme-color" content="#006765" />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body class="has-sticky-banner">
+    <!-- Sticky Banner -->
+    <div id="sticky-banner" class="sticky-banner" tabindex="-1">
+      <div class="container">
+        <div class="sticky-banner-content">
+          <p class="sticky-banner-text">
+            Conheça o OPSICO Plano Plus: a assistência psicológica que você merece!
+          </p>
+        </div>
+        <div class="sticky-banner-actions">
+          <a href="./plano-plus.html" class="sticky-banner-cta">Clique aqui</a>
+          <button
+            type="button"
+            class="sticky-banner-close"
+            onclick="closeStickyBanner()"
+            aria-label="Fechar banner">
+            <img src="./img/icons/close-line.svg" alt="Fechar" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <a href="./index.html" class="logo">
+          <img src="./img/Horizontal Azul Escuro.svg" alt="Logo Opsico" />
+          <img src="./img/Horizontal Branco (1).svg" alt="Logo Opsico Branco" class="logo-white" />
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span class="hamburger"></span>
+        </button>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"> Serviços <img src="./img/chevron-down.svg" alt="" /> </a>
+              <ul class="dropdown-menu">
+                <li><a href="./terapia-para-adultos.html">Terapia para Adultos</a></li>
+                <li><a href="./criancas-adolescentes.html">Crianças e Adolescentes</a></li>
+                <li><a href="./casais-familias.html">Casais e Famílias</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">
+                Para Organizações <img src="./img/chevron-down.svg" alt="" />
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="./nr1.html">NR-1</a></li>
+                <li><a href="./programa-saude-corporativa.html">Programa de saúde corporativa</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"> Convênios <img src="./img/chevron-down.svg" alt="" /> </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Saúde Mental Acessível para Todos</a></li>
+                <li><a href="./plano-plus.html">Plano Plus</a></li>
+              </ul>
+            </li>
+            <li class="mobile-only">
+              <a href="#" class="btn btn-login">Login</a>
+            </li>
+            <li class="mobile-only">
+              <a href="#" class="btn btn-primary">Encontre um profissional</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#" class="btn btn-login">Login</a>
+          <a href="#" class="btn btn-primary">Encontre um profissional</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-plus">
+      <div class="container">
+        <div
+          class="hero-text"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <h1>
+            <span class="plan-name">Plano Plus OPSICO</span>
+            Alta performance emocional<br />
+            exige um cuidado à altura.
+          </h1>
+          <p>
+            Desenvolva sua inteligência emocional e alcance o máximo do seu potencial com acompanhamento
+            especializado e personalizado.
+          </p>
+          <a href="#" class="btn btn-primary">Começar</a>
+        </div>
+        <div
+          class="hero-image"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <img src="./img/hero.png" alt="Profissional de alta performance" />
+        </div>
+      </div>
+    </section>
+
+    <section class="plano-exclusivo">
+      <div class="container">
+        <div
+          class="content-section"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <h2 class="main-title">Seu momento de olhar pra dentro.</h2>
+          <p class="subtitle">Com escuta qualificada e suporte profissional</p>
+          <p class="description">
+            No nosso plano exclusivo, você tem acesso a psicólogos experientes, altamente qualificados e
+            selecionados para entregar resultados reais nas suas demandas emocionais e de saúde mental.
+          </p>
+
+          <h3 class="benefits-title">O que você recebe:</h3>
+        </div>
+
+        <!-- Nova comparação -->
+        <div
+          class="comparison-section"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <div class="table-wrapper" role="region" aria-labelledby="cmp-title" tabindex="0">
+            <table class="cmp-table" id="cmp-title">
+              <caption class="sr-only">
+                Comparativo entre OPSICO e atendimento presencial
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="cmp-feature-header">O que você recebe</th>
+                  <th scope="col" class="cmp-opsico-header">OPSICO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">4 sessões mensais (online)</th>
+                  <td class="is-yes">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">50 minutos cada sessão, no seu tempo, no seu ritmo</th>
+                  <td class="is-yes">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Atendimento com psicólogos especialistas e pós-graduados, com ampla experiência clínica
+                  </th>
+                  <td class="is-yes">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Um plano pensado para acolher sua história, seus desafios e sua busca por equilíbrio
+                  </th>
+                  <td class="is-yes">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="cta-section" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+            <a href="#" class="btn btn-primary">Começar minha jornada</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-hero">
+      <div class="container">
+        <div
+          class="cta-hero-wrapper"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <div class="cta-hero-content">
+            <h2
+              class="cta-hero-title"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true">
+              Cuidar da mente é um ato de coragem.<br />
+              Fazer isso com excelência, é um privilégio.
+            </h2>
+            <p
+              class="cta-hero-description"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true">
+              Descubra uma experiência terapêutica de alta performance, com especialistas que entendem você
+              por inteiro.
+            </p>
+            <div
+              class="cta-hero-actions"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true">
+              <a href="#" class="btn btn-white">Começar agora</a>
+            </div>
+          </div>
+
+          <!-- Background decorative element -->
+          <div class="cta-hero-bg">
+            <svg viewBox="0 0 1024 1024" aria-hidden="true" class="cta-hero-gradient">
+              <circle r="512" cx="512" cy="512" fill="url(#gradient-cta)" fill-opacity="0.6" />
+              <defs>
+                <radialGradient id="gradient-cta">
+                  <stop stop-color="var(--accent-3)" />
+                  <stop offset="1" stop-color="var(--primary)" />
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plano-plus-section" id="plano-plus">
+      <div class="container">
+        <!-- Primeira parte: Card de preço + coluna de chamada com botões lado a lado -->
+        <div class="price-section">
+          <!-- Coluna esquerda: Card de preço -->
+          <div class="price-content" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+            <div class="plan-card">
+              <h2 class="plan-title">Plano Plus</h2>
+              <div class="plan-price">R$ 760,00</div>
+              <p class="plan-description">
+                *As 4 sessões podem ser utilizadas ao longo de 30 dias, com flexibilidade de agenda.
+              </p>
+            </div>
+          </div>
+
+          <!-- Coluna direita: Título + texto + botões lado a lado -->
+          <div class="cta-column" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+            <div class="start-content">
+              <h3 class="section-title">Comece hoje</h3>
+              <p class="section-subtitle">
+                Comece agora com quem realmente cuida de você — por inteiro. Ou, se preferir, conheça planos
+                da categoria <strong>Básica</strong> até o primeiro passo.
+              </p>
+            </div>
+            <div class="action-buttons" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+              <a href="#" class="btn btn-primary" role="button">Quero uma experiência premium</a>
+              <a href="#" class="btn-secondary" role="button">Conhecer outros planos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda parte: Benefícios + imagem do app -->
+      <div class="container">
+        <div class="why-wrapper">
+          <div class="why-content" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+            <h4 class="why-title">Por que contratar o Plano Plus?</h4>
+            <p class="why-subtitle">
+              Nossa missão é devolver sentido, clareza e equilíbrio à sua jornada emocional, com um plano que
+              respeita sua história, seu tempo e sua individualidade.
+            </p>
+
+            <ul class="benefits-list">
+              <li class="benefit-item" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+                <div class="benefit-icon">
+                  <img src="./img/icons/checkbox-circle-line.svg" alt="Check icon" />
+                </div>
+                <div class="benefit-content">
+                  <h5 class="benefit-title">Suporte humano em todas as etapas</h5>
+                  <p class="benefit-description">
+                    Desde a escolha do profissional até o acompanhamento do seu progresso, sem automatismos.
+                  </p>
+                </div>
+              </li>
+              <li class="benefit-item" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                <div class="benefit-icon">
+                  <img src="./img/icons/checkbox-circle-line.svg" alt="Check icon" />
+                </div>
+                <div class="benefit-content">
+                  <h5 class="benefit-title">Seleção e acompanhamento de profissionais</h5>
+                  <p class="benefit-description">
+                    Processo rigoroso de seleção, supervisão constante e reciclagem técnica.
+                  </p>
+                </div>
+              </li>
+              <li class="benefit-item" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                <div class="benefit-icon">
+                  <img src="./img/icons/checkbox-circle-line.svg" alt="Check icon" />
+                </div>
+                <div class="benefit-content">
+                  <h5 class="benefit-title">Foco em resultados e bem-estar emocional</h5>
+                  <p class="benefit-description">
+                    Direção e estratégias personalizadas com base em evidências.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="visual-side" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+            <div class="phone-mockup">
+              <img src="./img/phone.png" alt="App OPSICO no celular" class="phone-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-convenio" id="cta-convenio">
+      <div class="container">
+        <div
+          class="cta-convenio__content"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <h2 class="cta-convenio__title">Tem convênio de saúde?</h2>
+          <h3 class="cta-convenio__subtitle">A gente cuida disso com você.</h3>
+          <p class="cta-convenio__description">
+            Nosso <strong>canal de acolhimento</strong> te ajuda em todo o processo de liberação junto ao seu
+            plano de saúde.
+          </p>
+          <a href="#" class="btn btn-primary" role="button">Verificar convênio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div
+          class="faq__intro"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <h2 class="faq__title">Como é feita a cobrança dos planos?</h2>
+          <p class="faq__description">
+            A cobrança do seu plano é realizada mensalmente, à vista e automática no cartão de crédito.
+          </p>
+          <p class="faq__note">No caso de boleto, um novo será enviado mensalmente para seu e-mail.</p>
+        </div>
+
+        <dl
+          class="faq__list"
+          data-aos="fade-up"
+          data-aos-delay="150"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+          <div class="faq-item">
+            <dt>
+              <button
+                type="button"
+                class="faq-item__trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-1"
+                id="faq-trigger-1">
+                <span class="faq-item__label">
+                  <span class="faq-item__number">1.</span>
+                  Posso cancelar a qualquer momento?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true">
+                  <span class="faq-item__icon-plus">+</span>
+                  <span class="faq-item__icon-minus">−</span>
+                </span>
+              </button>
+            </dt>
+            <dd
+              id="faq-panel-1"
+              class="faq-item__content"
+              role="region"
+              aria-labelledby="faq-trigger-1"
+              hidden>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a erat ac nunc fringilla
+                semper.
+              </p>
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button
+                type="button"
+                class="faq-item__trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+                id="faq-trigger-2">
+                <span class="faq-item__label">
+                  <span class="faq-item__number">2.</span>
+                  Posso trocar de psicólogo sempre que quiser?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true">
+                  <span class="faq-item__icon-plus">+</span>
+                  <span class="faq-item__icon-minus">−</span>
+                </span>
+              </button>
+            </dt>
+            <dd
+              id="faq-panel-2"
+              class="faq-item__content"
+              role="region"
+              aria-labelledby="faq-trigger-2"
+              hidden>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a erat ac nunc fringilla
+                semper.
+              </p>
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button
+                type="button"
+                class="faq-item__trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+                id="faq-trigger-3">
+                <span class="faq-item__label">
+                  <span class="faq-item__number">3.</span>
+                  Há renovação automática dos planos?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true">
+                  <span class="faq-item__icon-plus">+</span>
+                  <span class="faq-item__icon-minus">−</span>
+                </span>
+              </button>
+            </dt>
+            <dd
+              id="faq-panel-3"
+              class="faq-item__content"
+              role="region"
+              aria-labelledby="faq-trigger-3"
+              hidden>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a erat ac nunc fringilla
+                semper.
+              </p>
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button
+                type="button"
+                class="faq-item__trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+                id="faq-trigger-4">
+                <span class="faq-item__label">
+                  <span class="faq-item__number">4.</span>
+                  Estou em um ambiente seguro?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true">
+                  <span class="faq-item__icon-plus">+</span>
+                  <span class="faq-item__icon-minus">−</span>
+                </span>
+              </button>
+            </dt>
+            <dd
+              id="faq-panel-4"
+              class="faq-item__content"
+              role="region"
+              aria-labelledby="faq-trigger-4"
+              hidden>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a erat ac nunc fringilla
+                semper.
+              </p>
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button
+                type="button"
+                class="faq-item__trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+                id="faq-trigger-5">
+                <span class="faq-item__label">
+                  <span class="faq-item__number">5.</span>
+                  Vou receber lembretes dos meus agendamentos?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true">
+                  <span class="faq-item__icon-plus">+</span>
+                  <span class="faq-item__icon-minus">−</span>
+                </span>
+              </button>
+            </dt>
+            <dd
+              id="faq-panel-5"
+              class="faq-item__content"
+              role="region"
+              aria-labelledby="faq-trigger-5"
+              hidden>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a erat ac nunc fringilla
+                semper.
+              </p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo">
+            <img src="./img/Horizontal Branco (1).svg" alt="OPSICO" />
+          </a>
+          <p class="tagline">Plano Plus - Alta performance emocional exige um cuidado à altura</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Rodapé">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Para Organizações</a></li>
+            <li><a href="#">Convênios</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Suporte</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="container footer-bottom">
+        <p class="copyright">© 2025 OPSICO. Todos os direitos reservados</p>
+      </div>
+    </footer>
+    <!-- Cookie Consent -->
+    <section id="cookie-consent" class="cookie-consent hidden">
+      <h2>🍪 Aviso de Cookies</h2>
+      <p>
+        Utilizamos cookies para garantir que oferecemos a melhor experiência em nosso site.
+        <a href="./politica-cookies.html" target="_blank">Leia nossa política de cookies</a>.
+      </p>
+      <div class="cookie-consent__actions">
+        <button class="btn-manage" onclick="manageCookiePreferences()">Gerenciar preferências</button>
+        <button class="btn-accept" onclick="acceptCookies()">Aceitar</button>
+      </div>
+    </section>
+
+    <script>
+      function closeStickyBanner() {
+        const banner = document.getElementById("sticky-banner")
+        const body = document.body
+
+        if (banner) {
+          banner.style.opacity = "0"
+          banner.style.transform = "translateY(-100%)"
+
+          setTimeout(() => {
+            banner.style.display = "none"
+            body.classList.remove("has-sticky-banner")
+          }, 300)
+        }
+      }
+    </script>
+  </body>
+  <script src="./js/scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    })
+  </script>
+</html>

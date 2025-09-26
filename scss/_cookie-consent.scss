@@ -34,8 +34,8 @@
 
   h2 {
     font-weight: 600; // equivalent to font-semibold
-    color: var(--primary);
-    font-size: 2.125rem; // increased from 1rem
+    color: var(--text-color);
+    font-size: clamp(2.4rem, 4vw, 1.2rem);
     margin: 0;
     margin-bottom: 1rem;
   }

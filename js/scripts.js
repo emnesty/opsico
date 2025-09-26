@@ -480,6 +480,21 @@ function manageCookiePreferences() {
   console.log("Gerenciar preferências de cookies")
 }
 
+// Function to close cookie consent without accepting
+function closeCookieConsent() {
+  const cookieConsent = document.getElementById("cookie-consent")
+
+  if (cookieConsent) {
+    cookieConsent.classList.remove("show")
+    setTimeout(() => {
+      cookieConsent.classList.add("hidden")
+      cookieConsent.classList.remove("animate-in")
+    }, 300)
+  }
+
+  console.log("Banner de cookies fechado (sem aceite)")
+}
+
 // Function to reset cookie consent (useful for testing)
 function resetCookieConsent() {
   localStorage.removeItem("opsico_cookie_consent")

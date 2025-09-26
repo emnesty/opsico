@@ -144,22 +144,82 @@ body.has-sticky-banner .header {
 
 @media (max-width: 480px) {
   .sticky-banner {
+    padding: 8px 0;
+
     .container {
-      flex-direction: column;
-      gap: 8px;
-      text-align: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 6px;
+      text-align: left;
+      padding: 0 8px;
     }
 
     &-content {
-      justify-content: center;
+      flex: 1;
+      min-width: 0;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+
+    &-text {
+      font-size: 12px;
+      line-height: 1.3;
+      flex: 1;
     }
 
     &-actions {
-      justify-content: center;
+      flex-shrink: 0;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+
+    &-cta {
+      font-size: 11px;
+      padding: 6px 10px;
+      white-space: nowrap;
+      min-width: auto;
+    }
+
+    &-close {
+      width: 24px;
+      height: 24px;
+
+      img {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
 
   body.has-sticky-banner .header {
-    margin-top: 68px;
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sticky-banner {
+    padding: 6px 0;
+
+    .container {
+      padding: 0 6px;
+    }
+
+    &-text {
+      font-size: 11px;
+    }
+
+    &-cta {
+      font-size: 10px;
+      padding: 5px 8px;
+    }
+
+    &-close {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  body.has-sticky-banner .header {
+    margin-top: 52px;
   }
 }

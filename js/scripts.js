@@ -533,3 +533,124 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.remove("has-sticky-banner")
   }
 })
+
+// Slider "Como funciona" — hover/click, autoplay e fade da imagem
+const stepCards = document.querySelectorAll(".how-steps .step-card")
+const phoneImg = document.getElementById("howPhoneImg")
+
+if (stepCards.length && phoneImg) {
+  const sources = ["/img/step1.png", "/img/step2.png", "/img/step3.png", "/img/step4.png"]
+
+  // Pre-caregar imagens para transição suave
+  sources.forEach((src) => {
+    const img = new Image()
+    img.src = src
+  })
+
+  let currentIndex = 0
+  let autoplayTimer
+  let isUserInteracting = false
+
+  // Função para destacar o step ativo
+  const highlightActiveStep = (index) => {
+    stepCards.forEach((card, i) => {
+      card.classList.toggle("active", i === index)
+    })
+  }
+
+  // Função para trocar a imagem com fade
+  const changeImage = (index) => {
+    if (phoneImg.src.includes(sources[index].split("/").pop())) {
+      return // Evita trocar para a mesma imagem
+    }
+
+    phoneImg.classList.add("fade")
+    setTimeout(() => {
+      phoneImg.src = sources[index]
+      phoneImg.onload = () => {
+        phoneImg.classList.remove("fade")
+      }
+    }, 150)
+  }
+
+  // Função principal para ativar um step
+  const activateStep = (index, fromUser = false) => {
+    if (index < 0 || index >= sources.length) return
+
+    currentIndex = index
+    highlightActiveStep(currentIndex)
+    changeImage(currentIndex)
+
+    if (fromUser) {
+      isUserInteracting = true
+      clearTimeout(autoplayTimer)
+      // Retoma o autoplay após 5 segundos de inatividade
+      setTimeout(() => {
+        isUserInteracting = false
+        startAutoplay()
+      }, 5000)
+    }
+  }
+
+  // Função para próximo step (autoplay)
+  const nextStep = () => {
+    if (!isUserInteracting) {
+      const nextIndex = (currentIndex + 1) % sources.length
+      activateStep(nextIndex)
+    }
+  }
+
+  // Iniciar autoplay
+  const startAutoplay = () => {
+    clearInterval(autoplayTimer)
+    if (!isUserInteracting) {
+      autoplayTimer = setInterval(nextStep, 3000) // 3 segundos
+    }
+  }
+
+  // Parar autoplay
+  const stopAutoplay = () => {
+    clearInterval(autoplayTimer)
+  }
+
+  // Event listeners para os step cards
+  stepCards.forEach((card, index) => {
+    // Mouse enter - ativa imediatamente
+    card.addEventListener("mouseenter", () => {
+      activateStep(index, true)
+    })
+
+    // Click - para dispositivos touch
+    card.addEventListener("click", (e) => {
+      e.preventDefault()
+      activateStep(index, true)
+    })
+  })
+
+  // Pausar autoplay quando mouse estiver na seção
+  const howSection = document.querySelector(".how-opsico")
+  if (howSection) {
+    howSection.addEventListener("mouseenter", () => {
+      stopAutoplay()
+    })
+
+    howSection.addEventListener("mouseleave", () => {
+      if (!isUserInteracting) {
+        startAutoplay()
+      }
+    })
+  }
+
+  // Inicializar
+  activateStep(0)
+  startAutoplay()
+
+  // Pausar quando a página não está visível
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoplay()
+    } else if (!isUserInteracting) {
+      startAutoplay()
+    }
+  })
+}

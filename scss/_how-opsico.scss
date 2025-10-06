@@ -1,0 +1,348 @@
+/* == Como funciona a OPSICO == */
+.how-opsico {
+  padding: 4rem 0;
+  margin-top: 0;
+  position: relative;
+  background: #fff;
+  z-index: 1;
+
+  .sec-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--deep-navy);
+    margin-bottom: 1rem;
+    margin-top: 64px;
+
+    @media (max-width: 640px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.how-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
+  }
+}
+
+.how-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-card {
+  background: #fff;
+  border: 1px solid var(--step-border, #e5e7eb);
+  padding: 3.25rem;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+
+  &:hover,
+  &.active {
+    border-color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 3%, #fff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 36, 77, 0.1);
+  }
+
+  &.active {
+    .step-index {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .step-body h3 {
+      color: var(--primary);
+    }
+  }
+}
+
+.step-index {
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--deep-navy);
+}
+
+.step-body {
+  h3 {
+    color: var(--deep-navy);
+    font-size: 2.125rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+  }
+
+  p {
+    color: #264159;
+    font-size: 1.58rem;
+    line-height: 1.65;
+  }
+}
+
+.how-phone {
+  position: relative;
+  isolation: isolate;
+
+  /* Símbolo verde atrás do mockup */
+  &::before {
+    content: "";
+    position: absolute;
+    --symbol-size: clamp(320px, 36vw, 560px);
+    width: var(--symbol-size);
+    height: var(--symbol-size);
+    right: -8%;
+    top: -6%;
+    opacity: 0.16;
+    z-index: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("/img/Simbolo\ Verde.svg"), url("/img/Simbolo Verde.svg");
+  }
+}
+
+.phone-frame {
+  position: relative;
+  z-index: 1;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+
+    &.fade {
+      opacity: 0;
+    }
+  }
+}
+
+/* == Responsivo: Como funciona a OPSICO == */
+@media (max-width: 1024px) {
+  .how-opsico {
+    background-position: 120% 40%;
+    padding: 3rem 0;
+    margin-top: 0;
+
+    .container {
+      padding: 0 16px;
+    }
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .how-phone {
+    order: -1;
+
+    &::before {
+      --symbol-size: clamp(280px, 48vw, 440px);
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      top: -24px;
+      opacity: 0.18;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .how-opsico {
+    padding: 2rem 0;
+
+    .container {
+      padding: 0 12px;
+    }
+  }
+
+  .step-card {
+    padding: 1rem;
+    grid-template-columns: 48px 1fr;
+    gap: 0.75rem;
+  }
+
+  .step-index {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .how-phone {
+    &::before {
+      --symbol-size: clamp(240px, 70vw, 360px);
+      top: -10px;
+      opacity: 0.2;
+    }
+  }
+}
+
+/* == Terapias == */
+.therapies {
+  padding: 4rem 0;
+  background: #f8fafc;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.therapies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.therapy-card {
+  border: 10px solid var(--card-color);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  &.card-green {
+    background-color: var(--card-green);
+  }
+
+  &.card-orange {
+    background-color: var(--brand-orange);
+  }
+
+  &.card-blue {
+    background-color: var(--card-blue);
+  }
+}
+
+.therapy-media {
+  padding: 12px 12px 0;
+
+  img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    @media (max-width: 640px) {
+      height: 240px;
+    }
+  }
+}
+
+.therapy-info {
+  margin: 12px;
+  background: var(--card-color);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 800;
+    margin: 0 0 0.15rem;
+  }
+
+  p {
+    opacity: 0.95;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.therapy-cta {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/* == Por que a OPSICO == */
+.why-opsico {
+  background: #f5f8fb;
+  padding: 3.5rem 0;
+}
+
+.why-lead {
+  color: #4b5b76;
+  max-width: 860px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin: -0.25rem 0 1.75rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.why-col {
+  border: 1px solid #e3ecf6;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+
+  &--with {
+    background: #e3edf7;
+    border-color: #d4e2f1;
+
+    .why-list li {
+      border-top-color: rgba(21, 58, 99, 0.15);
+    }
+  }
+}
+
+.why-heading {
+  text-align: center;
+  font-weight: 800;
+  color: var(--deep-navy);
+  padding: 2rem 2.25rem;
+  font-size: 1.55rem;
+}
+
+.why-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 1.25rem 1.25rem;
+    color: #1f3652;
+    text-align: center;
+    border-top: 1px solid rgba(21, 58, 99, 0.12);
+
+    @media (max-width: 640px) {
+      padding: 1rem 0.75rem;
+      font-weight: 600;
+    }
+  }
+}

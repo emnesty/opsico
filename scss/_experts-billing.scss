@@ -4,26 +4,22 @@
   padding: 3.5rem 0;
 
   &-title {
-    font-size: 2.25rem;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      font-size: 1.9rem;
-    }
+    text-align: center;
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    color: var(--deep-navy);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
   }
 
   &-lead {
     color: #4b5b76;
-    max-width: 980px;
-    font-size: 1.05rem;
+    max-width: 860px;
+    font-size: 1.85rem;
     line-height: 1.85;
-    margin: -0.25rem 0 1.75rem;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    margin: -0.25rem auto 1.75rem;
+    text-align: center;
+    margin-bottom: 64px;
   }
 
   &-action {
@@ -39,7 +35,7 @@
   &-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px 20px;
+    gap: 18px 22px;
 
     @media (max-width: 768px) {
       justify-content: center;
@@ -50,14 +46,15 @@
   border: 1.5px solid var(--outline);
   color: #1f3652;
   border-radius: 12px;
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
-  line-height: 1;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.325rem;
+  font-weight: 500;
+  line-height: 1.2;
   user-select: none;
 
   @media (max-width: 480px) {
-    font-size: 0.98rem;
-    padding: 0.65rem 0.9rem;
+    font-size: 1.05rem;
+    padding: 0.75rem 1rem;
   }
 }
 
@@ -93,6 +90,7 @@
     padding: 0.95rem 1.4rem;
     border-radius: 12px;
     font-weight: 700;
+    transition: background-color 0.3s ease;
 
     &:hover {
       background: #13385f;

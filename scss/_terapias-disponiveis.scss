@@ -14,13 +14,14 @@
       font-size: clamp(2.4rem, 4vw, 3.2rem);
       font-weight: 600;
       color: var(--text-color);
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      margin-top: 64px;
       line-height: 1.2;
       text-align: center;
     }
 
     p {
-      font-size: 1.8rem;
+      font-size: 2.8rem;
       color: #5a6c7d;
       line-height: 1.6;
       max-width: 80rem;
@@ -122,5 +123,85 @@
     &:hover {
       opacity: 0.9;
     }
+  }
+}
+
+/* ===========================
+   Por que a OPSICO é a escolha certa?
+   =========================== */
+
+.why-opsico {
+  background: #f5f8fb;
+  padding: 3.5rem 0;
+  h2 {
+    text-align: center;
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    color: var(--deep-navy);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+.why-lead {
+  color: #4b5b76;
+  max-width: 860px;
+  font-size: 1.85rem;
+  line-height: 1.85;
+  margin: -0.25rem auto 1.75rem;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.why-col {
+  border: 1px solid #e3ecf6;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+
+  &--with {
+    background: #e3edf7;
+    border-color: #d4e2f1;
+  }
+}
+
+.why-heading {
+  text-align: center;
+  font-weight: 800;
+  color: var(--deep-navy);
+  padding: 2rem 2.25rem;
+  font-size: 2.55rem;
+}
+
+.why-list {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+
+  li {
+    padding: 1.25rem 1.25rem;
+    color: #1f3652;
+    text-align: center;
+    border-top: 1px solid rgba(21, 58, 99, 0.12);
+
+    @media (max-width: 640px) {
+      padding: 1rem 0.75rem;
+      font-weight: 600;
+    }
+  }
+
+  .why-col--with & li {
+    border-top-color: rgba(21, 58, 99, 0.15);
   }
 }

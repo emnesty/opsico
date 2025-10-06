@@ -1,0 +1,132 @@
+/* == Terapia e Saúde Corporativa == */
+.corp-care {
+  padding: 3rem 0;
+  background: #f7f9fb;
+}
+
+.corp-card {
+  background: #147a6d;
+  color: #fff;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.corp-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0.35rem;
+  margin-top: 64px;
+}
+
+.corp-lead {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 1.25rem;
+  margin-bottom: 64px;
+}
+
+.corp-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.corp-fig {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #eaeef3;
+  height: clamp(360px, 45vw, 520px);
+  display: flex;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.figcap {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+
+  &--right {
+    left: auto;
+    right: 16px;
+    text-align: right;
+  }
+
+  h4 {
+    font-weight: 800;
+    font-size: 2.125rem;
+    margin-bottom: 0.35rem;
+  }
+
+  p {
+    font-size: 1.65rem;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+}
+
+.name-tag {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f2a4d;
+  border: 1.5px solid #cfe2db;
+  border-radius: 8px;
+  padding: 6px 7px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  user-select: none;
+  z-index: 1;
+
+  &--inner-right {
+    right: 12px;
+  }
+
+  &--inner-left {
+    left: 12px;
+  }
+
+  &--top {
+    top: 14px;
+  }
+
+  &--bottom {
+    bottom: 14px;
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .corp-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .corp-fig {
+    height: clamp(320px, 64vw, 460px);
+  }
+
+  .figcap--right {
+    text-align: left;
+    left: 16px;
+    right: 16px;
+  }
+
+  .name-tag--inner-left,
+  .name-tag--inner-right {
+    right: 12px;
+    left: auto;
+  }
+}

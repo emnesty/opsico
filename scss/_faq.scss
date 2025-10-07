@@ -42,13 +42,18 @@
 
   .faq-item {
     padding: clamp(20px, 3vw, 24px) 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: clamp(20px, 3vw, 28px);
+    margin-bottom: 16px;
 
     &:first-of-type {
-      padding-top: 0;
+      padding-top: clamp(20px, 3vw, 28px);
     }
 
     &:last-of-type {
-      padding-bottom: 0;
+      padding-bottom: clamp(20px, 3vw, 28px);
+      margin-bottom: 0;
     }
   }
 

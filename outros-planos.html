@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outros Planos - OPSICO</title>
+    <meta
+      name="description"
+      content="Conheça nossos planos de terapia psicológica: Plano Essencial e Plano Básico. Encontre o plano ideal para seu bem-estar mental." />
+    <meta name="author" content="OPSICO" />
+
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./favicon.ico" />
+    <meta name="msapplication-TileColor" content="#006765" />
+    <meta name="theme-color" content="#006765" />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/outros-planos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Header base fornecido -->
+    <header class="header">
+      <div class="container">
+        <a href="./index.html" class="logo">
+          <img src="./img/Horizontal Azul Escuro.svg" alt="Logo Opsico" />
+          <img src="./img/Horizontal Branco (1).svg" alt="Logo Opsico Branco" class="logo-white" />
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span class="hamburger"></span>
+        </button>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"> Serviços <img src="./img/chevron-down.svg" alt="" /> </a>
+              <ul class="dropdown-menu">
+                <li><a href="./terapia-para-adultos.html">Terapia para Adultos</a></li>
+                <li><a href="./criancas-adolescentes.html">Crianças e Adolescentes</a></li>
+                <li><a href="./casais-familias.html">Casais e Famílias</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">
+                Para Organizações <img src="./img/chevron-down.svg" alt="" />
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="./nr1.html">NR-1</a></li>
+                <li><a href="./programa-saude-corporativa.html">Programa de saúde corporativa</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"> Convênios <img src="./img/chevron-down.svg" alt="" /> </a>
+              <ul class="dropdown-menu">
+                <li><a href="./plano-plus.html">Plano Plus</a></li>
+                <li><a href="./outros-planos.html">Outros Planos</a></li>
+              </ul>
+            </li>
+            <li class="mobile-only">
+              <a href="#" class="btn btn-login">Login</a>
+            </li>
+            <li class="mobile-only">
+              <a href="#" class="btn btn-primary">Encontre um profissional</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#" class="btn btn-login">Login</a>
+          <a href="#" class="btn btn-primary">Encontre um profissional</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pricing">
+      <section class="pricing-hero">
+        <div class="container">
+          <h1>Outros Planos</h1>
+          <p class="sub">Simples e claros. Escolha o plano que combina com sua rotina.</p>
+
+          <div class="actions">
+            <a class="btn btn-secondary" href="#planos">Começar agora</a>
+            <a class="btn btn-tertiary" href="https://wa.me/5500000000000" target="_blank" rel="noopener"
+              >Falar com atendimento</a
+            >
+          </div>
+        </div>
+        <div aria-hidden="true" class="bg-ring"></div>
+      </section>
+
+      <section id="planos" class="plans">
+        <div class="container grid">
+          <!-- Essencial -->
+          <article class="plan">
+            <header class="plan-head">
+              <h3>Plano Essencial</h3>
+              <p class="price"><strong>R$ 399</strong><span>/mês</span></p>
+              <p class="note">Pagamento: boleto ou cartão</p>
+            </header>
+
+            <ul class="features">
+              <li>4 sessões por mês</li>
+              <li>Atendimento online ou presencial</li>
+              <li>Sessões de 50 minutos</li>
+              <li>Assinatura recorrente</li>
+            </ul>
+
+            <button class="btn btn-primary block" data-modal="essencial">Mais detalhes</button>
+          </article>
+
+          <!-- Básico -->
+          <article class="plan">
+            <header class="plan-head">
+              <h3>Plano Básico</h3>
+              <p class="price"><strong>R$ 259</strong><span>/mês</span></p>
+              <p class="note">Pagamento: boleto ou cartão</p>
+            </header>
+
+            <ul class="features">
+              <li>2 sessões por mês</li>
+              <li>Atendimento online</li>
+              <li>Sessões de 50 minutos</li>
+              <li>Assinatura recorrente</li>
+            </ul>
+
+            <button class="btn btn-primary block" data-modal="basico">Mais detalhes</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Modal Essencial -->
+      <div class="modal-overlay" id="modal-essencial">
+        <div class="modal">
+          <div class="modal-header">
+            <h2>Plano Essencial – Início do processo terapêutico</h2>
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+          </div>
+          <div class="modal-content">
+            <p>
+              Indicado para quem deseja iniciar um acompanhamento psicológico contínuo. Espaço seguro para
+              falar sobre sentimentos, emoções e comportamentos que impedem seu bem-estar.
+            </p>
+
+            <ul class="bullets">
+              <li>Apoio contínuo com sessões regulares</li>
+              <li>Foco em resultados e direcionamento estratégico</li>
+              <li>Flexibilidade: online ou presencial</li>
+              <li>Acolhimento seguro com profissionais experientes</li>
+            </ul>
+
+            <div class="kv">
+              <div><span>Nome</span><strong>Plano Essencial</strong></div>
+              <div><span>Duração</span><strong>30 dias</strong></div>
+              <div><span>Profissionais</span><strong>Todos</strong></div>
+              <div><span>Sessões</span><strong>4 por mês</strong></div>
+              <div><span>Duração da sessão</span><strong>50 minutos</strong></div>
+              <div><span>Valor</span><strong>R$ 399,00</strong></div>
+              <div><span>Assinatura</span><strong>Recorrente</strong></div>
+              <div><span>Atendimento</span><strong>Online ou presencial</strong></div>
+            </div>
+
+            <a class="btn btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener"
+              >Contratar via WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Básico -->
+      <div class="modal-overlay" id="modal-basico">
+        <div class="modal">
+          <div class="modal-header">
+            <h2>Plano Básico – Atendimento eventual</h2>
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+          </div>
+          <div class="modal-content">
+            <p>
+              Indicado para quem precisa de orientação psicológica prática e rápida, ideal para situações
+              pontuais ou início do processo terapêutico.
+            </p>
+
+            <ul class="bullets">
+              <li>Flexibilidade e rapidez</li>
+              <li>Suporte estratégico para questões imediatas</li>
+              <li>Segurança e sigilo</li>
+              <li>Gestão do tempo com 2 sessões de 50 minutos</li>
+            </ul>
+
+            <div class="kv">
+              <div><span>Nome</span><strong>Plano Básico</strong></div>
+              <div><span>Duração</span><strong>30 dias</strong></div>
+              <div><span>Profissionais</span><strong>Todos</strong></div>
+              <div><span>Sessões</span><strong>2 por mês</strong></div>
+              <div><span>Duração da sessão</span><strong>50 minutos</strong></div>
+              <div><span>Valor</span><strong>R$ 259,00</strong></div>
+              <div><span>Assinatura</span><strong>Recorrente</strong></div>
+              <div><span>Atendimento</span><strong>Online</strong></div>
+            </div>
+
+            <a class="btn btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener"
+              >Contratar via WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Detalhes Essencial -->
+      <section id="essencial-detalhes" class="details" style="display: none">
+        <div class="container">
+          <h2>Plano Essencial – Início do processo terapêutico</h2>
+          <p>
+            Indicado para quem deseja iniciar um acompanhamento psicológico contínuo. Espaço seguro para falar
+            sobre sentimentos, emoções e comportamentos que impedem seu bem-estar.
+          </p>
+
+          <ul class="bullets">
+            <li>Apoio contínuo com sessões regulares</li>
+            <li>Foco em resultados e direcionamento estratégico</li>
+            <li>Flexibilidade: online ou presencial</li>
+            <li>Acolhimento seguro com profissionais experientes</li>
+          </ul>
+
+          <div class="kv">
+            <div><span>Nome</span><strong>Plano Essencial</strong></div>
+            <div><span>Duração</span><strong>30 dias</strong></div>
+            <div><span>Profissionais</span><strong>Todos</strong></div>
+            <div><span>Sessões</span><strong>4 por mês</strong></div>
+            <div><span>Duração da sessão</span><strong>50 minutos</strong></div>
+            <div><span>Valor</span><strong>R$ 399,00</strong></div>
+            <div><span>Assinatura</span><strong>Recorrente</strong></div>
+            <div><span>Atendimento</span><strong>Online ou presencial</strong></div>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener"
+            >Contratar via WhatsApp</a
+          >
+        </div>
+      </section>
+
+      <!-- Detalhes Básico -->
+      <section id="basico-detalhes" class="details" style="display: none">
+        <div class="container">
+          <h2>Plano Básico – Atendimento eventual</h2>
+          <p>
+            Indicado para quem precisa de orientação psicológica prática e rápida, ideal para situações
+            pontuais ou início do processo terapêutico.
+          </p>
+
+          <ul class="bullets">
+            <li>Flexibilidade e rapidez</li>
+            <li>Suporte estratégico para questões imediatas</li>
+            <li>Segurança e sigilo</li>
+            <li>Gestão do tempo com 2 sessões de 50 minutos</li>
+          </ul>
+
+          <div class="kv">
+            <div><span>Nome</span><strong>Plano Básico</strong></div>
+            <div><span>Duração</span><strong>30 dias</strong></div>
+            <div><span>Profissionais</span><strong>Todos</strong></div>
+            <div><span>Sessões</span><strong>2 por mês</strong></div>
+            <div><span>Duração da sessão</span><strong>50 minutos</strong></div>
+            <div><span>Valor</span><strong>R$ 259,00</strong></div>
+            <div><span>Assinatura</span><strong>Recorrente</strong></div>
+            <div><span>Atendimento</span><strong>Online</strong></div>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener"
+            >Contratar via WhatsApp</a
+          >
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq">
+        <div class="container">
+          <h2>FAQs</h2>
+          <p class="lead">
+            Tudo sobre produto e cobrança. Não encontrou o que procura?
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">Fale com a equipe</a>.
+          </p>
+
+          <div class="faq-grid">
+            <article class="faq-item">
+              <h3>Posso trocar de psicólogo?</h3>
+              <p>Sim, você pode trocar de psicólogo quantas vezes precisar sem custo adicional.</p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Posso escolher o psicólogo?</h3>
+              <p>
+                Sim, você escolhe o profissional que mais se adequa às suas necessidades através do nosso
+                catálogo.
+              </p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Há fidelidade?</h3>
+              <p>Não. Você pode cancelar a qualquer momento sem multa ou taxa.</p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Posso cancelar quando quiser?</h3>
+              <p>Sim, o cancelamento é livre e pode ser feito a qualquer momento.</p>
+            </article>
+
+            <article class="faq-item">
+              <h3>O que acontece se eu não usar todas as sessões?</h3>
+              <p>As sessões não utilizadas não são acumuladas para o próximo mês.</p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Como funciona o atendimento presencial?</h3>
+              <p>
+                Para o Plano Essencial, você pode escolher entre atendimento online ou presencial nos
+                consultórios parceiros.
+              </p>
+            </article>
+          </div>
+
+          <div class="cta-strip">
+            <p>Ainda com dúvidas?</p>
+            <a class="btn btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener"
+              >Entrar em contato</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo">
+            <img src="./img/Horizontal Branco (1).svg" alt="OPSICO" />
+          </a>
+          <p class="tagline">Cuidado em saúde mental com profissionais qualificados</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Rodapé">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Para Organizações</a></li>
+            <li><a href="#">Convênios</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Suporte</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="container footer-bottom">
+        <p class="copyright">© 2025 OPSICO. Todos os direitos reservados</p>
+      </div>
+    </footer>
+    <!-- Cookie Consent -->
+    <section id="cookie-consent" class="cookie-consent hidden">
+      <button
+        class="cookie-consent__close"
+        onclick="closeCookieConsent()"
+        aria-label="Fechar aviso de cookies">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <h2>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          style="display: inline-block; margin-right: 0.5rem; vertical-align: middle; color: var(--primary)">
+          <path
+            d="M9 17C9 17 16 18 19 21H20C20.5523 21 21 20.5523 21 20V13.937C21.8626 13.715 22.5 12.9319 22.5 12C22.5 11.0681 21.8626 10.285 21 10.063V4C21 3.44772 20.5523 3 20 3H19C16 6 9 7 9 7H5C3.89543 7 3 7.89543 3 9V15C3 16.1046 3.89543 17 5 17H6L7 22H9V17ZM11 8.6612C11.6833 8.5146 12.5275 8.31193 13.4393 8.04373C15.1175 7.55014 17.25 6.77262 19 5.57458V18.4254C17.25 17.2274 15.1175 16.4499 13.4393 15.9563C12.5275 15.6881 11.6833 15.4854 11 15.3388V8.6612ZM5 9H9V15H5V9Z"></path>
+        </svg>
+        Aviso de Cookies
+      </h2>
+      <p>
+        Utilizamos cookies para garantir que oferecemos a melhor experiência em nosso site.
+        <a href="./politica-cookies.html" target="_blank">Leia nossa política de cookies</a>.
+      </p>
+      <div class="cookie-consent__actions">
+        <button class="btn-manage" onclick="manageCookiePreferences()">Gerenciar preferências</button>
+        <button class="btn-accept" onclick="acceptCookies()">Aceitar</button>
+      </div>
+    </section>
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

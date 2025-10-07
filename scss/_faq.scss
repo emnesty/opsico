@@ -1,33 +1,30 @@
 .faq {
-  padding: clamp(64px, 8vw, 120px) 0;
+  padding: clamp(96px, 12vw, 160px) 0;
   background: #ffffff;
 
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
   &__intro {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    gap: clamp(12px, 2vw, 16px);
+    gap: 0;
+    margin-bottom: clamp(48px, 8vw, 64px);
   }
 
   &__title {
-    font-size: clamp(2.6rem, 2rem + 1.6vw, 3.6rem);
-    font-weight: 700;
-    color: var(--primary);
+    font-size: clamp(3rem, 2.5rem + 2vw, 4.8rem);
+    font-weight: 600;
+    color: #111827;
     margin: 0;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
   }
 
   &__description {
-    font-size: clamp(1.6rem, 1.4rem + 0.4vw, 1.9rem);
+    font-size: clamp(1.6rem, 1.4rem + 0.4vw, 1.8rem);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.75;
     margin: 0;
+    margin-top: 16px;
   }
 
   &__note {
@@ -38,17 +35,20 @@
   }
 
   &__list {
-    margin: clamp(40px, 6vw, 64px) auto 0;
+    margin: 0;
     padding: 0;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    border-top: none;
   }
 
   .faq-item {
-    padding: clamp(20px, 3vw, 28px) 0;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    padding: clamp(20px, 3vw, 24px) 0;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
 
     &:last-of-type {
-      border-bottom: none;
+      padding-bottom: 0;
     }
   }
 
@@ -61,34 +61,46 @@
     text-align: left;
     border: none;
     background: transparent;
-    color: var(--primary);
-    font-size: 1.7rem;
+    color: #111827;
+    font-size: clamp(1.5rem, 1.4rem + 0.2vw, 1.6rem);
     font-weight: 600;
+    line-height: 1.75;
     padding: 0;
     cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--primary);
+    }
   }
 
   .faq-item__label {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    line-height: 1.5;
+    gap: 0;
+    line-height: 1.75;
+    flex: 1;
   }
 
   .faq-item__number {
-    font-weight: 600;
-    color: color-mix(in srgb, var(--primary) 85%, #000000 15%);
+    display: none;
   }
 
   .faq-item__icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 32px;
     height: 32px;
-    color: color-mix(in srgb, var(--primary) 75%, #000000 25%);
-    font-size: 2.2rem;
-    line-height: 1;
+    color: var(--primary);
+    margin-left: 24px;
+  }
+
+  .faq-item__icon-plus,
+  .faq-item__icon-minus {
+    width: 32px;
+    height: 32px;
   }
 
   .faq-item__icon-minus {
@@ -96,14 +108,14 @@
   }
 
   .faq-item__content {
-    margin-top: 12px;
-    padding-right: clamp(0px, 6vw, 48px);
+    margin-top: 8px;
+    padding-right: clamp(0px, 8vw, 48px);
 
     p {
       margin: 0;
-      font-size: 1.6rem;
-      line-height: 1.65;
-      color: color-mix(in srgb, var(--text-color) 80%, #4b5563 20%);
+      font-size: clamp(1.5rem, 1.4rem + 0.2vw, 1.6rem);
+      line-height: 1.75;
+      color: #4b5563;
     }
   }
 
@@ -118,42 +130,73 @@
   }
 
   @media (max-width: 768px) {
+    padding: clamp(64px, 10vw, 96px) 0;
+
     .container {
-      padding: 0 16px;
+      padding: 0 24px;
     }
 
     &__intro {
-      text-align: center;
-      align-items: center;
+      margin-bottom: clamp(32px, 6vw, 48px);
     }
 
     .faq-item__trigger {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
+      gap: 16px;
     }
 
     .faq-item__icon {
       width: 28px;
       height: 28px;
-      font-size: 2rem;
+      margin-left: 16px;
+    }
+
+    .faq-item__icon-plus,
+    .faq-item__icon-minus {
+      width: 28px;
+      height: 28px;
+    }
+
+    .faq-item__content {
+      padding-right: clamp(0px, 5vw, 40px);
     }
   }
 
   @media (max-width: 480px) {
+    padding: clamp(48px, 8vw, 64px) 0;
+
+    .container {
+      padding: 0 16px;
+    }
+
     &__title {
-      font-size: clamp(2.2rem, 2rem + 1vw, 2.8rem);
+      font-size: clamp(2.4rem, 2rem + 1.5vw, 3.2rem);
+    }
+
+    &__intro {
+      margin-bottom: clamp(24px, 5vw, 32px);
     }
 
     &__description,
     &__note {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
-    .faq-item__label {
-      gap: 8px;
+    .faq-item {
+      padding: 16px 0;
+    }
+
+    .faq-item__trigger {
+      font-size: 1.4rem;
     }
 
     .faq-item__content {
       padding-right: 0;
+      margin-top: 6px;
+
+      p {
+        font-size: 1.4rem;
+      }
     }
   }
 }

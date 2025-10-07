@@ -654,3 +654,65 @@ if (stepCards.length && phoneImg) {
     }
   })
 }
+
+// ===== MODAIS DOS PLANOS (OUTROS-PLANOS.HTML) =====
+// Funcionalidade para abrir e fechar modais dos planos Essencial e Básico
+if (document.querySelector("[data-modal]")) {
+  // Selecionar todos os botões que abrem modais
+  const modalTriggers = document.querySelectorAll("[data-modal]")
+  const modalOverlays = document.querySelectorAll(".modal-overlay")
+  const modalCloseButtons = document.querySelectorAll(".modal-close")
+
+  // Função para abrir modal
+  function openModal(modalId) {
+    const modal = document.getElementById(`modal-${modalId}`)
+    if (modal) {
+      modal.classList.add("active")
+      document.body.style.overflow = "hidden" // Prevenir scroll da página
+    }
+  }
+
+  // Função para fechar modal
+  function closeModal(modal) {
+    if (modal) {
+      modal.classList.remove("active")
+      document.body.style.overflow = "" // Restaurar scroll da página
+    }
+  }
+
+  // Adicionar event listeners aos botões de abrir modal
+  modalTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault()
+      const modalId = trigger.getAttribute("data-modal")
+      openModal(modalId)
+    })
+  })
+
+  // Adicionar event listeners aos botões de fechar modal
+  modalCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".modal-overlay")
+      closeModal(modal)
+    })
+  })
+
+  // Fechar modal ao clicar no overlay (fora do modal)
+  modalOverlays.forEach((overlay) => {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        closeModal(overlay)
+      }
+    })
+  })
+
+  // Fechar modal ao pressionar ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const activeModal = document.querySelector(".modal-overlay.active")
+      if (activeModal) {
+        closeModal(activeModal)
+      }
+    }
+  })
+}

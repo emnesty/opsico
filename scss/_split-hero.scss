@@ -1,4 +1,4 @@
-/* == Split Hero == */
+
 .split-hero {
   position: relative;
   z-index: 2;
@@ -79,12 +79,11 @@
     box-sizing: border-box;
 
     &.btn-secondary {
-      padding: 14px 30px; /* Compensar pela borda de 2px */
+      padding: 14px 30px; 
     }
   }
 }
 
-/* == Responsivo: Split Hero == */
 @media (max-width: 1024px) {
   .split-hero {
     &__inner {

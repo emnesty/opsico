@@ -1,4 +1,3 @@
-// Resultados OPSICO Section Styles
 .resultados-opsico {
   padding: 80px 0 64px;
   color: var(--text-color);
@@ -59,7 +58,6 @@
     }
   }
 
-  /* Responsive Design */
   @media (max-width: 1024px) {
     padding: 64px 0 56px;
 
@@ -117,7 +115,6 @@
   }
 }
 
-// Rede de Especialistas Section Styles
 .rede-especialistas {
   padding: 88px 0;
 
@@ -186,7 +183,6 @@
     }
   }
 
-  /* cores suaves por cartão */
   .especialista-a {
     background: #f4f6ff;
     border-color: #e6ebff;
@@ -224,7 +220,6 @@
     }
   }
 
-  /* responsivo */
   @media (max-width: 1024px) {
     .rede-especialistas__grid {
       grid-template-columns: repeat(2, 1fr);

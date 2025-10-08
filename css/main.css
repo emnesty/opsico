@@ -28,7 +28,7 @@
 .hero .hero-text span {
   font-size: var(--font-size-text-sm);
   display: block;
-  color: var(--text-color); /* suporte esverdeado */
+  color: var(--text-color); 
   opacity: 0.9;
   margin-top: var(--spacing-sm);
 }
@@ -127,7 +127,6 @@
   }
 }
 
-/* == Split Hero == */
 .split-hero {
   position: relative;
   z-index: 2;
@@ -203,10 +202,9 @@
   box-sizing: border-box;
 }
 .cta-row .btn.btn-secondary {
-  padding: 14px 30px; /* Compensar pela borda de 2px */
+  padding: 14px 30px; 
 }
 
-/* == Responsivo: Split Hero == */
 @media (max-width: 1024px) {
   .split-hero__inner {
     grid-template-columns: 1fr;
@@ -401,7 +399,6 @@
   }
 }
 
-/* Utilitário de acessibilidade */
 .sr-only {
   position: absolute !important;
   width: 1px;
@@ -414,11 +411,10 @@
   border: 0;
 }
 
-/* Wrapper com rolagem no mobile */
 .plano-exclusivo {
   padding: 6rem 0;
   background: linear-gradient(135deg, var(--hero-bg-color) 0%, var(--white) 100%);
-  /* Responsividade geral da seção */
+  
 }
 .plano-exclusivo .container {
   margin: 0 auto;
@@ -496,9 +492,7 @@
 }
 .plano-exclusivo .comparison-section {
   margin-top: 4rem;
-  /* Seção CTA */
-  /* Responsividade otimizada */
-  /* Estilos para impressão */
+  
 }
 .plano-exclusivo .comparison-section .table-wrapper {
   overflow-x: auto;
@@ -514,8 +508,7 @@
   border-spacing: 0;
   min-width: 500px;
   scroll-snap-align: start;
-  /* Coluna OPSICO com destaque sutil */
-  /* Ícones modernos e simples */
+  
 }
 .plano-exclusivo .comparison-section .cmp-table thead th {
   position: sticky;
@@ -713,15 +706,10 @@
   }
 }
 
-/* CTA Hero Section */
 .cta-hero {
   background: var(--white);
   padding: 8rem 0;
-  /* Botão branco destacado */
-  /* Background decorativo */
-  /* Responsividade */
-  /* Animações e efeitos de performance */
-  /* Modo escuro automático */
+  
 }
 .cta-hero .container {
   margin: 0 auto;
@@ -923,12 +911,9 @@ body.header-fixed {
     padding-right: 32px;
   }
 }
-/* Paleta OPSICO 
-1 #00244D  2 #1D558F  3 #48179B  4 #6D45AF
-5 #E5792F  6 #EA9459  7 #BA9E83  8 #E3CCAD  9 #006765
-*/
+
 :root {
-  /* Tokens de cor */
+  
   --primary: #00244d;
   --secondary: #1d558f;
   --accent-1: #48179b;
@@ -940,7 +925,7 @@ body.header-fixed {
   --support: var(--primary);
   --white: #ffffff;
   --background-default: #0d0d0e;
-  /* Novas variáveis para split-hero */
+  
   --deep-navy: #0f2a4d;
   --light-on-navy: #e7eef7;
   --outline: #9ab6d4;
@@ -950,17 +935,17 @@ body.header-fixed {
   --hero-bg-color: color-mix(in srgb, var(--neutral-200) 85%, #fff);
   --card-bg-color: color-mix(in srgb, var(--neutral-200) 65%, #fff);
   --how-it-works-bg-color: color-mix(in srgb, var(--secondary) 10%, #fff);
-  /* Variáveis para seção "Como funciona" */
+  
   --step-border: #e5e7eb;
   --card-green: #10b981;
   --card-blue: #3b82f6;
   --brand-orange: #f59e0b;
-  /* Fontes */
+  
   --font-family-primary: "Montserrat", sans-serif;
   --font-family: "Montserrat", sans-serif;
   --font-size-text-body: 1.8rem;
   --font-size-text-sm: 1.5rem;
-  /* Espaçamento */
+  
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -990,7 +975,7 @@ body.header-fixed {
   background-color: var(--white);
   color: var(--button-color);
   border: 2px solid var(--button-color);
-  padding: 18px 30px; /* Ajuste para compensar a borda */
+  padding: 18px 30px; 
 }
 .btn-secondary:hover {
   background-color: var(--button-color);
@@ -1125,10 +1110,6 @@ body.header-fixed {
   position: relative;
 }
 
-/* ===========================
-   HEADER — corrigido mobile dropdown centralizado
-   =========================== */
-/* Garante que dropdowns estejam ocultos apenas durante carregamento inicial */
 .header:not(.loaded) .dropdown-menu {
   opacity: 0 !important;
   visibility: hidden !important;
@@ -1143,9 +1124,7 @@ body.header-fixed {
   z-index: 1000;
   background-color: var(--white);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Header fixo no scroll */
-  /* Quando o menu mobile estiver ativo */
-  /* === AJUSTES COMPLETOS PARA O MENU MOBILE === */
+  
 }
 .header.fixed {
   position: fixed;
@@ -1253,10 +1232,10 @@ body.header-fixed {
   width: max-content;
   opacity: 0;
   visibility: hidden;
-  transition: none; /* Remove transição inicial */
+  transition: none; 
   z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  /* Habilita transições após carregamento da página */
+  
 }
 .header.loaded .header nav .nav-list li.dropdown .dropdown-menu {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1439,9 +1418,8 @@ body.header-fixed {
   .header nav .nav-list li.dropdown {
     display: flex;
     flex-direction: column;
-    align-items: center; /* garante centralização do submenu */
-    /* desabilita comportamento :hover do desktop no mobile */
-    /* DROPDOWN CENTRALIZADO */
+    align-items: center; 
+    
   }
   .header nav .nav-list li.dropdown:hover .dropdown-menu {
     opacity: 0;
@@ -1459,7 +1437,7 @@ body.header-fixed {
     transform: rotate(180deg);
   }
   .header nav .nav-list li.dropdown .dropdown-menu {
-    /* reset total das props do desktop */
+    
     position: static;
     top: auto;
     left: auto;
@@ -1471,16 +1449,16 @@ body.header-fixed {
     box-shadow: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    /* centralização */
+    
     width: clamp(260px, 90vw, 420px);
-    margin: 8px auto 0; /* centraliza no eixo X */
-    align-self: center; /* garante centro mesmo com padding do container */
+    margin: 8px auto 0; 
+    align-self: center; 
     text-align: center;
     padding: 0;
-    transition: none; /* Remove transição inicial */
+    transition: none; 
     max-height: 0;
     overflow: hidden;
-    /* Habilita transições após carregamento da página */
+    
   }
   .header.loaded .header nav .nav-list li.dropdown .dropdown-menu {
     transition: all 0.3s ease;
@@ -1816,8 +1794,7 @@ body.has-sticky-banner .header {
   background-color: var(--how-it-works-bg-color);
   padding-top: 94px;
   padding-bottom: 94px;
-  /* CARD "Terapia individual" */
-  /* Responsivo */
+  
 }
 .how-it-works .individual-therapy-card {
   background: var(--white);
@@ -1914,7 +1891,6 @@ body.has-sticky-banner .header {
   }
 }
 
-/* == Como funciona a OPSICO == */
 .how-opsico {
   padding: 4rem 0;
   margin-top: 0;
@@ -2000,7 +1976,7 @@ body.has-sticky-banner .header {
 .how-phone {
   position: relative;
   isolation: isolate;
-  /* Símbolo verde atrás do mockup */
+  
 }
 .how-phone::before {
   content: "";
@@ -2034,7 +2010,6 @@ body.has-sticky-banner .header {
   opacity: 0;
 }
 
-/* == Responsivo: Como funciona a OPSICO == */
 @media (max-width: 1024px) {
   .how-opsico {
     background-position: 120% 40%;
@@ -2083,7 +2058,7 @@ body.has-sticky-banner .header {
     opacity: 0.2;
   }
 }
-/* == Terapias == */
+
 .therapies {
   padding: 4rem 0;
   background: #f8fafc;
@@ -2168,7 +2143,6 @@ body.has-sticky-banner .header {
   opacity: 0.9;
 }
 
-/* == Por que a OPSICO == */
 .why-opsico {
   background: #f5f8fb;
   padding: 3.5rem 0;
@@ -2238,9 +2212,7 @@ body.has-sticky-banner .header {
   padding: 72px 0;
   text-align: center;
   color: var(--text-color);
-  /* === CARROSSEL (scroll-snap) === */
-  /* === FEATURES === */
-  /* === RESPONSIVO === */
+  
 }
 .diferenciais-opsico .section-title {
   font-size: clamp(2.4rem, 2.2rem + 0.8vw, 3.2rem);
@@ -2273,7 +2245,7 @@ body.has-sticky-banner .header {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  /* remove scrollbar visual */
+  
   scrollbar-width: none;
 }
 .diferenciais-opsico .carousel .carousel-track::-webkit-scrollbar {
@@ -2310,7 +2282,7 @@ body.has-sticky-banner .header {
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 8px;
-  /* barra superior fina centralizada */
+  
 }
 .diferenciais-opsico .features-grid .feature-item::before {
   content: "";
@@ -2498,14 +2470,12 @@ body.has-sticky-banner .header {
 
 .beneficios-terapia {
   padding: 88px 0;
-  /* cores suaves por cartão */
-  /* card grande inferior ocupando a linha inteira */
-  /* responsivo */
+  
 }
 .beneficios-terapia .bt-header {
   max-width: 78ch;
-  margin: 0 auto 64px; /* centraliza o bloco */
-  text-align: center; /* centraliza textos */
+  margin: 0 auto 64px; 
+  text-align: center; 
 }
 .beneficios-terapia .bt-header h2 {
   font-size: clamp(2.4rem, 4vw, 3.2rem);
@@ -2519,7 +2489,7 @@ body.has-sticky-banner .header {
   line-height: 160%;
   color: var(--text-color);
   opacity: 0.9;
-  margin: 0 auto; /* centraliza o parágrafo */
+  margin: 0 auto; 
   max-width: 70ch;
 }
 .beneficios-terapia .bt-grid {
@@ -2626,13 +2596,10 @@ body.has-sticky-banner .header {
   }
 }
 
-/* ===========================
-   Casais & Famílias — header da seção centralizado
-   =========================== */
 .beneficios-terapia-cf .beneficios-terapia-cf__header {
   max-width: 78ch;
-  margin: 0 auto 48px; /* centraliza o bloco */
-  text-align: center; /* centraliza textos */
+  margin: 0 auto 48px; 
+  text-align: center; 
 }
 .beneficios-terapia-cf .beneficios-terapia-cf__header p {
   margin: 0 auto;
@@ -2640,10 +2607,9 @@ body.has-sticky-banner .header {
 }
 
 .depoimento-cliente {
-  background: #f6f9f9; /* sutil como na imagem */
+  background: #f6f9f9; 
   padding: clamp(48px, 6vw, 96px) 0;
-  /* Conteúdo à direita */
-  /* Responsivo */
+  
 }
 .depoimento-cliente .depoimento-conteudo {
   color: var(--text-color);
@@ -2653,7 +2619,7 @@ body.has-sticky-banner .header {
   margin-bottom: 12px;
 }
 .depoimento-cliente .estrelas span {
-  color: #f8b400; /* amarelo das estrelas */
+  color: #f8b400; 
   font-size: clamp(18px, 2vw, 22px);
   line-height: 1;
   display: inline-block;
@@ -2661,7 +2627,7 @@ body.has-sticky-banner .header {
 .depoimento-cliente .texto {
   margin: 0 0 24px 0;
   font-weight: 600;
-  color: #0d525a; /* próximo do verde do site */
+  color: #0d525a; 
   font-size: 36px;
   line-height: 1.15;
   font-family: var(--font-family-primary);
@@ -3017,15 +2983,7 @@ body.has-sticky-banner .header {
   background: var(--accent-2);
   padding: 80px 0 64px;
   text-align: center;
-  /* Breakpoints específicos para melhor responsividade */
-  /* Tablets landscape */
-  /* Tablets portrait */
-  /* Smartphones landscape */
-  /* Smartphones portrait */
-  /* Smartphones pequenos */
-  /* Melhorias para touch e interação */
-  /* Safe area para dispositivos com notch */
-  /* Orientation adjustments */
+  
 }
 .hero-cf .container {
   display: flex;
@@ -3256,17 +3214,9 @@ body.has-sticky-banner .header {
   text-align: center;
 }
 
-/* ===========================
-   Benefícios — Casais & Famílias
-   =========================== */
 .beneficios-terapia-cf {
   padding: 88px 0;
-  /* Cabeçalho */
-  /* Imagem ilustrativa */
-  /* Conteúdo e cartões */
-  /* Paleta suave para cada cartão */
-  /* CTA */
-  /* Responsivo */
+  
 }
 .beneficios-terapia-cf__header {
   max-width: 78ch;
@@ -3365,19 +3315,10 @@ body.has-sticky-banner .header {
   }
 }
 
-/* ===========================
-   Terapia Familiar
-   =========================== */
 .terapia-familiar {
   padding: 88px 0;
   background-color: var(--how-it-works-bg-color);
-  /* Cabeçalho da Seção */
-  /* Divisores para 'Quando Procurar' e 'Benefícios' */
-  /* Grid Genérico */
-  /* Grid Específico para 'Quando Procurar' */
-  /* Grid Específico para 'Benefícios' */
-  /* Estilos dos Cards */
-  /* Responsividade */
+  
 }
 .terapia-familiar h3 {
   font-size: 2.8rem;
@@ -3481,12 +3422,7 @@ body.has-sticky-banner .header {
 
 .diferenciais {
   padding: 88px 0;
-  /* Cabeçalho da Seção */
-  /* Conteúdo principal (Grid de 2 colunas) */
-  /* Lista de diferenciais (coluna da esquerda) */
-  /* Imagem (coluna da direita) */
-  /* Botão de CTA */
-  /* Responsividade */
+  
 }
 .diferenciais__header {
   max-width: 78ch;
@@ -3577,15 +3513,7 @@ body.has-sticky-banner .header {
   background: var(--secondary);
   padding: 80px 0 64px;
   text-align: center;
-  /* Breakpoints específicos para melhor responsividade */
-  /* Tablets landscape */
-  /* Tablets portrait */
-  /* Smartphones landscape */
-  /* Smartphones portrait */
-  /* Smartphones pequenos */
-  /* Melhorias para touch e interação */
-  /* Safe area para dispositivos com notch */
-  /* Orientation adjustments */
+  
 }
 .hero-ca .container {
   display: flex;
@@ -3734,8 +3662,7 @@ body.has-sticky-banner .header {
 .para-pais {
   padding: 88px 0;
   background-color: var(--how-it-works-bg-color);
-  /* Cabeçalho da Seção */
-  /* Conteúdo com os parágrafos */
+  
 }
 .para-pais__header {
   max-width: 78ch;
@@ -3774,7 +3701,7 @@ body.has-sticky-banner .header {
 
 .para-adolescentes {
   padding: 88px 0;
-  /* Responsividade */
+  
 }
 .para-adolescentes__content {
   display: flex;
@@ -3815,19 +3742,10 @@ body.has-sticky-banner .header {
   }
 }
 
-/* ===========================
-   Nosso Jeito de Cuidar — cards
-   =========================== */
 .jeito-de-cuidar {
   padding: 88px 0;
   background-color: var(--how-it-works-bg-color);
-  /* Cabeçalho */
-  /* Imagem Principal */
-  /* Grid de cards */
-  /* Card base */
-  /* Variações de cor para ficar como a referência */
-  /* CTA */
-  /* Responsivo */
+  
 }
 .jeito-de-cuidar__header {
   max-width: 78ch;
@@ -3948,15 +3866,7 @@ body.has-sticky-banner .header {
   background: var(--primary);
   padding: 80px 0 64px;
   text-align: center;
-  /* Breakpoints específicos para melhor responsividade */
-  /* Tablets landscape */
-  /* Tablets portrait */
-  /* Smartphones landscape */
-  /* Smartphones portrait */
-  /* Smartphones pequenos */
-  /* Melhorias para touch e interação */
-  /* Safe area para dispositivos com notch */
-  /* Orientation adjustments */
+  
 }
 .hero-nr1 .container {
   display: flex;
@@ -4168,9 +4078,7 @@ body.has-sticky-banner .header {
   padding: 80px 0 64px;
   background: #f8fafc;
   color: var(--text-color);
-  /* Breakpoints específicos */
-  /* Melhorias para acessibilidade e interação */
-  /* Animações suaves para números */
+  
 }
 .estatisticas-nr1 .container {
   margin: 0 auto;
@@ -4542,7 +4450,6 @@ body.has-sticky-banner .header {
   }
 }
 
-/* Como Funciona o Programa OPSICO Section */
 .como-funciona-programa {
   padding: 8rem 0;
   background: #fafafa;
@@ -5005,8 +4912,7 @@ body.has-sticky-banner .header {
 
 .cuidado-saude-mental {
   padding: 88px 0;
-  /* cores suaves por cartão */
-  /* responsivo */
+  
 }
 .cuidado-saude-mental .container {
   margin: 0 auto;
@@ -5092,7 +4998,7 @@ body.has-sticky-banner .header {
 .resultados-opsico {
   padding: 80px 0 64px;
   color: var(--text-color);
-  /* Responsive Design */
+  
 }
 .resultados-opsico .container {
   margin: 0 auto;
@@ -5196,8 +5102,7 @@ body.has-sticky-banner .header {
 
 .rede-especialistas {
   padding: 88px 0;
-  /* cores suaves por cartão */
-  /* responsivo */
+  
 }
 .rede-especialistas .container {
   margin: 0 auto;
@@ -5648,7 +5553,7 @@ body.has-sticky-banner .header {
     left: -0.75rem;
   }
 }
-/* Seção Programas OPSICO */
+
 .programas-opsico {
   padding: 8rem 0;
   background: #f8f9fa;
@@ -5739,7 +5644,6 @@ body.has-sticky-banner .header {
   }
 }
 
-/* Seção Produtividade e Bem-estar */
 .produtividade-bem-estar {
   padding: 8rem 0;
   background: #fafbfc;
@@ -5909,7 +5813,6 @@ body.has-sticky-banner .header {
   }
 }
 
-/* Seção Benefícios Clínicos e Negócio */
 .beneficios-clinicos {
   padding: 8rem 0;
   background: #f7f8fc;
@@ -6078,7 +5981,6 @@ body.has-sticky-banner .header {
   }
 }
 
-/* Seção Diversidade de Condições Tratadas */
 .condicoes-tratadas {
   padding: 8rem 0;
   background: #ffffff;
@@ -6207,7 +6109,6 @@ body.has-sticky-banner .header {
   object-fit: cover;
 }
 
-/* Seção Tecnologia OPSICO */
 .tecnologia-opsico {
   padding: 8rem 0;
   background: #f0f4f8;
@@ -6907,9 +6808,6 @@ body.has-sticky-banner .header {
   }
 }
 
-/* ===========================
-   Terapias Disponíveis na OPSICO
-   =========================== */
 .terapias-disponiveis {
   padding: 4rem 0;
   background: #f8fafc;
@@ -7047,9 +6945,6 @@ body.has-sticky-banner .header {
   opacity: 0.9;
 }
 
-/* ===========================
-   Por que a OPSICO é a escolha certa?
-   =========================== */
 .why-opsico {
   background: #f5f8fb;
   padding: 3.5rem 0;
@@ -7125,7 +7020,6 @@ body.has-sticky-banner .header {
   border-top-color: rgba(21, 58, 99, 0.15);
 }
 
-/* == Faixa de Impacto == */
 .impact-strip {
   background: var(--neutral-200);
   color: var(--primary);
@@ -7168,7 +7062,7 @@ body.has-sticky-banner .header {
     gap: 1.25rem;
   }
 }
-/* == Terapia e Saúde Corporativa == */
+
 .corp-care {
   padding: 3rem 0;
   background: #f7f9fb;
@@ -7461,8 +7355,6 @@ body.has-sticky-banner .header {
   transition: max-height 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
 }
 
-/* outros-planos.scss */
-/* Buttons - usando variáveis CSS */
 .pricing .btn.btn-primary {
   background: var(--primary);
   color: var(--white);
@@ -7505,7 +7397,6 @@ body.has-sticky-banner .header {
   width: 100%;
 }
 
-/* HERO */
 .pricing-hero {
   position: relative;
   overflow: hidden;
@@ -7550,7 +7441,6 @@ body.has-sticky-banner .header {
   pointer-events: none;
 }
 
-/* PLANS GRID */
 .plans {
   background: #fff;
   padding: 48px 0 24px;
@@ -7625,7 +7515,6 @@ body.has-sticky-banner .header {
   color: var(--primary);
 }
 
-/* DETAILS */
 .details {
   padding: 40px 0;
 }
@@ -7689,7 +7578,6 @@ body.has-sticky-banner .header {
   margin-top: 16px;
 }
 
-/* FAQ */
 .faq {
   padding: 48px 0 80px;
   background: #f8fafc;
@@ -7751,7 +7639,6 @@ body.has-sticky-banner .header {
   font-weight: 600;
 }
 
-/* MODAL */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -7892,5 +7779,3 @@ body.has-sticky-banner .header {
   margin-right: auto;
   text-align: center;
 }
-
-/*# sourceMappingURL=main.css.map */

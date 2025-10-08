@@ -1,4 +1,3 @@
-// Benefícios NR-1 - Seção específica para página NR-1
 .beneficios-nr1 {
   padding: 88px 0;
 
@@ -68,13 +67,12 @@
     }
   }
 
-  // Cores específicas para cada card
   .beneficio-card--rosa {
     background: #fdf2f8;
     border-color: #fce7f3;
 
     .beneficio-number {
-      background: var(--accent-2); // rosa
+      background: var(--accent-2);
     }
   }
 
@@ -83,7 +81,7 @@
     border-color: #e6ebff;
 
     .beneficio-number {
-      background: var(--accent-1); // roxo
+      background: var(--accent-1);
     }
   }
 
@@ -92,7 +90,7 @@
     border-color: #ffefcc;
 
     .beneficio-number {
-      background: var(--accent-3); // laranja
+      background: var(--accent-3);
     }
   }
 
@@ -101,7 +99,7 @@
     border-color: #d6ecff;
 
     .beneficio-number {
-      background: var(--secondary); // azul
+      background: var(--secondary);
     }
   }
 
@@ -110,7 +108,7 @@
     border-color: #dcfce7;
 
     .beneficio-number {
-      background: var(--accent-4); // verde
+      background: var(--accent-4);
     }
   }
 
@@ -119,11 +117,10 @@
     border-color: #d4f6e7;
 
     .beneficio-number {
-      background: var(--primary); // azul escuro
+      background: var(--primary);
     }
   }
 
-  // CTA da seção
   .beneficios-nr1__cta {
     margin-top: 64px;
     text-align: center;
@@ -140,7 +137,6 @@
     }
   }
 
-  // Responsivo
   @media (max-width: 1024px) {
     .beneficios-nr1__grid {
       grid-template-columns: repeat(2, 1fr);

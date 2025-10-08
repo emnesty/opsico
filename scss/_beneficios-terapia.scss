@@ -3,8 +3,8 @@
 
   .bt-header {
     max-width: 78ch;
-    margin: 0 auto 64px; /* centraliza o bloco */
-    text-align: center; /* centraliza textos */
+    margin: 0 auto 64px; 
+    text-align: center; 
 
     h2 {
       font-size: clamp(2.4rem, 4vw, 3.2rem);
@@ -19,7 +19,7 @@
       line-height: 160%;
       color: var(--text-color);
       opacity: 0.9;
-      margin: 0 auto; /* centraliza o parágrafo */
+      margin: 0 auto; 
       max-width: 70ch;
     }
   }
@@ -60,7 +60,6 @@
     }
   }
 
-  /* cores suaves por cartão */
   .bt-a {
     background: #f4f6ff;
     border-color: #e6ebff;
@@ -93,7 +92,6 @@
     }
   }
 
-  /* card grande inferior ocupando a linha inteira */
   .bt-e {
     background: #f7edff;
     border-color: #efdbff;
@@ -120,7 +118,6 @@
     }
   }
 
-  /* responsivo */
   @media (max-width: 1024px) {
     .bt-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -142,14 +139,11 @@
   }
 }
 
-/* ===========================
-   Casais & Famílias — header da seção centralizado
-   =========================== */
 .beneficios-terapia-cf {
   .beneficios-terapia-cf__header {
     max-width: 78ch;
-    margin: 0 auto 48px; /* centraliza o bloco */
-    text-align: center; /* centraliza textos */
+    margin: 0 auto 48px; 
+    text-align: center; 
   }
   .beneficios-terapia-cf__header p {
     margin: 0 auto;

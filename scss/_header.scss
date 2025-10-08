@@ -1,8 +1,4 @@
-/* ===========================
-   HEADER — corrigido mobile dropdown centralizado
-   =========================== */
 
-/* Garante que dropdowns estejam ocultos apenas durante carregamento inicial */
 .header:not(.loaded) .dropdown-menu {
   opacity: 0 !important;
   visibility: hidden !important;
@@ -18,7 +14,6 @@
   background-color: var(--white);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Header fixo no scroll */
   &.fixed {
     position: fixed;
     top: 0;
@@ -32,7 +27,6 @@
     z-index: 1001;
   }
 
-  /* Quando o menu mobile estiver ativo */
   &.menu-active {
     @media (max-width: 640px) {
       position: fixed;
@@ -146,11 +140,10 @@
             width: max-content;
             opacity: 0;
             visibility: hidden;
-            transition: none; /* Remove transição inicial */
+            transition: none; 
             z-index: 1000;
             border: 1px solid rgba(0, 0, 0, 0.06);
 
-            /* Habilita transições após carregamento da página */
             .header.loaded & {
               transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
@@ -302,7 +295,6 @@
     }
   }
 
-  /* === AJUSTES COMPLETOS PARA O MENU MOBILE === */
   @media (max-width: 640px) {
     .mobile-menu-toggle {
       display: flex;
@@ -360,9 +352,8 @@
           &.dropdown {
             display: flex;
             flex-direction: column;
-            align-items: center; /* garante centralização do submenu */
+            align-items: center; 
 
-            /* desabilita comportamento :hover do desktop no mobile */
             &:hover .dropdown-menu {
               opacity: 0;
               visibility: hidden;
@@ -381,9 +372,8 @@
               }
             }
 
-            /* DROPDOWN CENTRALIZADO */
             .dropdown-menu {
-              /* reset total das props do desktop */
+              
               position: static;
               top: auto;
               left: auto;
@@ -397,18 +387,16 @@
               border: 1px solid rgba(255, 255, 255, 0.2);
               border-radius: 8px;
 
-              /* centralização */
               width: clamp(260px, 90vw, 420px);
-              margin: 8px auto 0; /* centraliza no eixo X */
-              align-self: center; /* garante centro mesmo com padding do container */
+              margin: 8px auto 0; 
+              align-self: center; 
               text-align: center;
 
               padding: 0;
-              transition: none; /* Remove transição inicial */
+              transition: none; 
               max-height: 0;
               overflow: hidden;
 
-              /* Habilita transições após carregamento da página */
               .header.loaded & {
                 transition: all 0.3s ease;
               }

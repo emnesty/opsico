@@ -1,9 +1,6 @@
-/* Paleta OPSICO 
-1 #00244D  2 #1D558F  3 #48179B  4 #6D45AF
-5 #E5792F  6 #EA9459  7 #BA9E83  8 #E3CCAD  9 #006765
-*/
+
 :root {
-  /* Tokens de cor */
+  
   --primary: #00244d;
   --secondary: #1d558f;
   --accent-1: #48179b;
@@ -16,7 +13,6 @@
   --white: #ffffff;
   --background-default: #0d0d0e;
 
-  /* Novas variáveis para split-hero */
   --deep-navy: #0f2a4d;
   --light-on-navy: #e7eef7;
   --outline: #9ab6d4;
@@ -29,19 +25,16 @@
   --card-bg-color: color-mix(in srgb, var(--neutral-200) 65%, #fff);
   --how-it-works-bg-color: color-mix(in srgb, var(--secondary) 10%, #fff);
 
-  /* Variáveis para seção "Como funciona" */
   --step-border: #e5e7eb;
   --card-green: #10b981;
   --card-blue: #3b82f6;
   --brand-orange: #f59e0b;
 
-  /* Fontes */
   --font-family-primary: "Montserrat", sans-serif;
   --font-family: "Montserrat", sans-serif;
   --font-size-text-body: 1.8rem;
   --font-size-text-sm: 1.5rem;
 
-  /* Espaçamento */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;

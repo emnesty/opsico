@@ -22,7 +22,7 @@
     background-color: var(--white);
     color: var(--button-color);
     border: 2px solid var(--button-color);
-    padding: 18px 30px; /* Ajuste para compensar a borda */
+    padding: 18px 30px; 
     &:hover {
       background-color: var(--button-color);
       color: var(--white);
@@ -38,7 +38,6 @@
     }
   }
 
-  // Responsividade para botões
   @media (max-width: 1024px) {
     padding: 18px 24px;
     font-size: 1.55rem;
@@ -59,7 +58,7 @@
   @media (max-width: 480px) {
     padding: 16px 20px;
     font-size: 1.5rem;
-    min-height: 48px; // Para facilitar o toque em dispositivos móveis
+    min-height: 48px;
     min-width: unset;
     width: 100%;
     max-width: 300px;
@@ -72,7 +71,6 @@
   }
 }
 
-// Componente para nome dos profissionais
 .professional-name-tag {
   position: absolute;
   bottom: 20px;
@@ -107,7 +105,6 @@
     color: var(--primary);
   }
 
-  // Responsividade
   @media (max-width: 768px) {
     bottom: 16px;
     left: 16px;
@@ -139,7 +136,6 @@
   }
 }
 
-// Container para slides com posicionamento relativo
 .slide-wrapper {
   position: relative;
   display: inline-block;
@@ -147,12 +143,10 @@
   height: 100%;
 }
 
-// Para a seção de depoimento
 .foto-wrap {
   position: relative;
 }
 
-// Container para imagens com componente de nome
 .image-container {
   position: relative;
   display: inline-block;
@@ -160,7 +154,6 @@
   height: 100%;
 }
 
-// Para seção how-it-works
 .image-wrapper {
   position: relative;
 }

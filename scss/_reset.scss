@@ -33,14 +33,14 @@ body {
   transition: padding-top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 
   &.header-fixed {
-    padding-top: 82px; // Compensa a altura do header quando fixo (ajustado)
+    padding-top: 82px;
 
     @media (max-width: 768px) {
-      padding-top: 72px; // Altura menor em mobile (ajustado)
+      padding-top: 72px;
     }
 
     @media (max-width: 640px) {
-      padding-top: 68px; // Ainda menor para mobile muito pequeno
+      padding-top: 68px;
     }
   }
 }

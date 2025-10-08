@@ -20,7 +20,6 @@
     }
   }
 
-  /* quadro “Quando procurar” */
   &__quadro {
     background: color-mix(in srgb, var(--neutral-200) 55%, #fff);
     border: 1px solid color-mix(in srgb, var(--neutral-200) 80%, #fff);
@@ -53,7 +52,6 @@
     }
   }
 
-  /* benefícios */
   &__header--beneficios {
     margin-top: 8px;
   }
@@ -76,7 +74,6 @@
     }
   }
 
-  /* cores suaves inspiradas na paleta */
   .tf-card--a {
     background: color-mix(in srgb, var(--accent-4) 25%, #fff);
     border-color: color-mix(in srgb, var(--accent-4) 40%, #fff);
@@ -96,7 +93,6 @@
     border-color: color-mix(in srgb, var(--accent-2) 35%, #fff);
   }
 
-  /* responsivo */
   @media (max-width: 1024px) {
     &__quadro-grid {
       grid-template-columns: repeat(2, 1fr);

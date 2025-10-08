@@ -1,8 +1,7 @@
 .para-pais {
   padding: 88px 0;
-  background-color: var(--how-it-works-bg-color); // Fundo suave para variar
+  background-color: var(--how-it-works-bg-color);
 
-  /* Cabeçalho da Seção */
   &__header {
     max-width: 78ch;
     margin: 0 auto 56px;
@@ -27,17 +26,16 @@
     }
   }
 
-  /* Conteúdo com os parágrafos */
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
-    max-width: 1100px; // Limita a largura para melhor leitura
+    max-width: 1100px;
     margin: 0 auto;
 
     p {
       font-size: 1.8rem;
-      line-height: 1.7; // Um pouco mais de espaço para leitura
+      line-height: 1.7;
       color: var(--text-color);
       margin: 0;
     }

@@ -1,4 +1,4 @@
-/* == Como funciona a OPSICO == */
+
 .how-opsico {
   padding: 4rem 0;
   margin-top: 0;
@@ -93,7 +93,6 @@
   position: relative;
   isolation: isolate;
 
-  /* Símbolo verde atrás do mockup */
   &::before {
     content: "";
     position: absolute;
@@ -129,7 +128,6 @@
   }
 }
 
-/* == Responsivo: Como funciona a OPSICO == */
 @media (max-width: 1024px) {
   .how-opsico {
     background-position: 120% 40%;
@@ -190,7 +188,6 @@
   }
 }
 
-/* == Terapias == */
 .therapies {
   padding: 4rem 0;
   background: #f8fafc;
@@ -280,7 +277,6 @@
   }
 }
 
-/* == Por que a OPSICO == */
 .why-opsico {
   background: #f5f8fb;
   padding: 3.5rem 0;

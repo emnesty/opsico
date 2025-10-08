@@ -82,14 +82,11 @@
         }
       }
     }
-  } // Remove a seção de arte/imagem
+  }
   .art {
     display: none;
   }
 
-  /* Breakpoints específicos para melhor responsividade */
-
-  /* Tablets landscape */
   @media (max-width: 1024px) {
     padding: 70px 0 56px;
 
@@ -99,7 +96,6 @@
     }
   }
 
-  /* Tablets portrait */
   @media (max-width: 768px) {
     padding: 60px 0 48px;
     text-align: center;
@@ -119,7 +115,6 @@
     }
   }
 
-  /* Smartphones landscape */
   @media (max-width: 640px) {
     padding: 50px 0 40px;
 
@@ -136,7 +131,6 @@
     }
   }
 
-  /* Smartphones portrait */
   @media (max-width: 480px) {
     padding: 40px 0 32px;
 
@@ -160,7 +154,7 @@
         }
       }
     }
-  } /* Smartphones pequenos */
+  } 
   @media (max-width: 360px) {
     padding: 32px 0 24px;
 
@@ -185,7 +179,6 @@
     }
   }
 
-  /* Melhorias para touch e interação */
   .actions .btn {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
@@ -200,7 +193,7 @@
       background-color: transparent;
       color: var(--white);
     }
-  } /* Safe area para dispositivos com notch */
+  } 
   @supports (padding: env(safe-area-inset-top)) {
     padding-top: calc(80px + env(safe-area-inset-top));
 
@@ -213,7 +206,6 @@
     }
   }
 
-  /* Orientation adjustments */
   @media (max-height: 640px) and (orientation: landscape) {
     padding: 40px 0 32px;
 

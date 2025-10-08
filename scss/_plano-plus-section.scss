@@ -1,4 +1,3 @@
-// Plano Plus Section - Clean & Minimalist Design
 .plano-plus-section {
   padding: 80px 0;
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
@@ -8,7 +7,6 @@
     padding: 0 20px;
   }
 
-  // Primeira parte: preço + coluna de chamada com botões lado a lado
   .price-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -58,7 +56,6 @@
       }
     }
 
-    // Coluna direita: título + texto + botões lado a lado
     .cta-column {
       display: flex;
       flex-direction: column;
@@ -145,7 +142,6 @@
     }
   }
 
-  // Segunda parte: benefícios e imagem
   .why-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -253,7 +249,6 @@
     }
   }
 
-  // Responsivo
   @media (max-width: 768px) {
     padding: 60px 0;
 

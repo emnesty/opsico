@@ -17,7 +17,6 @@
     opacity: 0.9;
   }
 
-  /* === CARROSSEL (scroll-snap) === */
   .main-image-wrapper {
     margin: 0 auto 40px;
     overflow: hidden;
@@ -39,7 +38,6 @@
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
 
-      /* remove scrollbar visual */
       scrollbar-width: none;
       &::-webkit-scrollbar {
         display: none;
@@ -64,7 +62,6 @@
     }
   }
 
-  /* === FEATURES === */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -82,7 +79,6 @@
       transition: all 0.3s ease;
       border-radius: 8px;
 
-      /* barra superior fina centralizada */
       &::before {
         content: "";
         position: absolute;
@@ -142,7 +138,6 @@
     margin-top: 32px;
   }
 
-  /* === RESPONSIVO === */
   @media (max-width: 1024px) {
     .features-grid {
       grid-template-columns: 1fr;

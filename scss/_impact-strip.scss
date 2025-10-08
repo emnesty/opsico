@@ -1,4 +1,4 @@
-/* == Faixa de Impacto == */
+
 .impact-strip {
   background: var(--neutral-200);
   color: var(--primary);
@@ -38,7 +38,6 @@
   }
 }
 
-// Responsividade
 @media (max-width: 640px) {
   .impact-stats {
     grid-template-columns: 1fr;

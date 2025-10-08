@@ -3,7 +3,6 @@
   padding-top: 94px;
   padding-bottom: 94px;
 
-  /* CARD "Terapia individual" */
   .individual-therapy-card {
     background: var(--white);
     border-radius: 16px;
@@ -110,7 +109,6 @@
     text-align: center;
   }
 
-  /* Responsivo */
   @media (max-width: 1024px) {
     .how-it-works-content {
       grid-template-columns: 1fr;

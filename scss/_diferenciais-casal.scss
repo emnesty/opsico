@@ -1,7 +1,6 @@
 .diferenciais {
   padding: 88px 0;
 
-  /* Cabeçalho da Seção */
   &__header {
     max-width: 78ch;
     margin: 0 auto 64px;
@@ -26,7 +25,6 @@
     }
   }
 
-  /* Conteúdo principal (Grid de 2 colunas) */
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -34,7 +32,6 @@
     align-items: center;
   }
 
-  /* Lista de diferenciais (coluna da esquerda) */
   &__list {
     display: flex;
     flex-direction: column;
@@ -57,7 +54,6 @@
     }
   }
 
-  /* Imagem (coluna da direita) */
   &__image {
     margin: 0;
     img {
@@ -65,18 +61,16 @@
       height: auto;
       border-radius: 16px;
       object-fit: cover;
-      aspect-ratio: 4 / 5; // Proporção elegante para a imagem
+      aspect-ratio: 4 / 5;
     }
   }
 
-  /* Botão de CTA */
   &__cta {
     margin-top: 64px;
     display: flex;
     justify-content: center;
   }
 
-  /* Responsividade */
   @media (max-width: 992px) {
     &__content {
       gap: 40px;
@@ -87,11 +81,11 @@
     padding: 64px 0;
 
     &__content {
-      grid-template-columns: 1fr; // Colunas empilhadas
+      grid-template-columns: 1fr;
     }
 
     &__image {
-      order: -1; // Imagem aparece primeiro no mobile
+      order: -1;
       max-width: 450px;
       margin: 0 auto;
     }

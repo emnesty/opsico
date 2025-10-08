@@ -1,15 +1,14 @@
-// Cookie Consent Component
 .cookie-consent {
   position: fixed;
-  left: 3rem; // equivalent to left-12 (48px)
-  bottom: 4rem; // equivalent to bottom-16 (64px)
-  max-width: 40rem; // increased from 28rem
-  padding: 1.5rem 3.5rem 1.5rem 1.5rem; // Mais espaço à direita para o botão de fechar maior
+  left: 3rem;
+  bottom: 4rem;
+  max-width: 40rem;
+  padding: 1.5rem 3.5rem 1.5rem 1.5rem;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
-  border: 1px solid #e5e7eb; // equivalent to border-gray-200
-  border-radius: 1rem; // equivalent to rounded-2xl
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 9999;
   opacity: 0;
@@ -83,7 +82,7 @@
   }
 
   h2 {
-    font-weight: 600; // equivalent to font-semibold
+    font-weight: 600;
     color: var(--text-color);
     font-size: clamp(2.4rem, 4vw, 1.2rem);
     margin: 0;
@@ -98,8 +97,8 @@
 
   p {
     margin-top: 1rem;
-    font-size: 1.225rem; // increased from 0.875rem
-    color: #6b7280; // equivalent to text-gray-600
+    font-size: 1.225rem;
+    color: #6b7280;
     line-height: 1.5;
     margin-bottom: 0;
 
@@ -118,25 +117,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1.25rem; // increased from 1rem
-    gap: 1.25rem; // increased from 1rem
+    margin-top: 1.25rem;
+    gap: 1.25rem;
     flex-shrink: 0;
 
     @media (max-width: 480px) {
       flex-direction: column;
-      gap: 1rem; // increased from 0.75rem
+      gap: 1rem;
     }
   }
 
   .btn-manage {
-    font-size: 1rem; // increased from 0.75rem
+    font-size: 1rem;
     color: var(--primary);
     text-decoration: underline;
     transition: color 0.3s ease;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.25rem; // added padding for better click target
+    padding: 0.25rem;
 
     &:hover {
       color: var(--secondary);
@@ -150,16 +149,16 @@
   }
 
   .btn-accept {
-    font-size: 1.125rem; // increased from 0.75rem
+    font-size: 1.125rem;
     background-color: var(--primary);
     color: #ffffff;
-    font-weight: 500; // equivalent to font-medium
-    border-radius: 0.5rem; // equivalent to rounded-lg
-    padding: 0.75rem 1.25rem; // increased from 0.625rem 1rem
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    min-width: 100px; // added min-width
+    min-width: 100px;
 
     &:hover {
       background-color: var(--secondary);
@@ -176,7 +175,6 @@
   }
 }
 
-// Animation for cookie consent appearance
 @keyframes slideInUp {
   from {
     opacity: 0;

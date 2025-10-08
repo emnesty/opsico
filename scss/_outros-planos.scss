@@ -1,9 +1,7 @@
-/* outros-planos.scss */
-// Variáveis locais apenas quando necessário
+
 $border: #e5e7eb;
 $muted: #6b7280;
 
-/* Buttons - usando variáveis CSS */
 .pricing {
   .btn {
     &.btn-primary {
@@ -52,7 +50,7 @@ $muted: #6b7280;
       width: 100%;
     }
   }
-} /* HERO */
+} 
 .pricing-hero {
   position: relative;
   overflow: hidden;
@@ -103,7 +101,6 @@ $muted: #6b7280;
   }
 }
 
-/* PLANS GRID */
 .plans {
   background: #fff;
   padding: 48px 0 24px;
@@ -185,7 +182,6 @@ $muted: #6b7280;
   }
 }
 
-/* DETAILS */
 .details {
   padding: 40px 0;
 
@@ -258,7 +254,6 @@ $muted: #6b7280;
   }
 }
 
-/* FAQ */
 .faq {
   padding: 48px 0 80px;
   background: #f8fafc;
@@ -325,7 +320,6 @@ $muted: #6b7280;
   }
 }
 
-/* MODAL */
 .modal-overlay {
   position: fixed;
   top: 0;
